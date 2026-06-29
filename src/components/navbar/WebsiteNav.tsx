@@ -1,0 +1,84 @@
+"use client";
+import { useWebContext } from "@/context-api/WebContext";
+import { contact } from "@/utils/constent";
+import { BookingCalenderIcon, FillDropDownIcon } from "@/utils/icons";
+import Image from "next/image";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { IoMdMenu } from "react-icons/io";
+import MobileNav from "./MobileNav";
+import { WebsiteNavData } from "./navData";
+
+const WebsiteNav = () => {
+  const pathName = usePathname();
+  const { setIsOpenNavBar } = useWebContext();
+  return (
+    <header className={`max_screen_width  background-color-1`}>
+      <nav className="flex items-center justify-between py-4 max_width">
+        <Link href="/" className="block relative md:w-40 w-40  aspect-[4/1.4]">
+          <Image
+            src={WebsiteNavData.logo}
+            alt="logo"
+            fill
+            className="object-cover"
+          />
+        </Link>
+        <ul className="relative xl:flex hidden items-center gap-4">
+          {WebsiteNavData.links.map((item, index) => (
+            <li className=" relative nav" key={index}>
+              <Link
+                href={item.href}
+                className={`text-dark font-semibold flex items-center gap-2 p-2 uppercase `}
+              >
+                {item.label}
+                <span
+                  className={`bg-primary ${pathName === item.href ? "w-full" : "span-border"}`}
+                ></span>
+                {item.subLinks && (
+                  <span className="icon duration-300 transition-all ease-in-out">
+                    <FillDropDownIcon />
+                  </span>
+                )}
+              </Link>
+              {item.subLinks && (
+                <span className="nav-1 backdrop-blur-md">
+                  {item.subLinks.map((subLink, subIndex) => {
+                    return (
+                      <span
+                        className="relative group nav-2"
+                        key={subIndex + "sub"}
+                      >
+                        <Link
+                          href={subLink.href ? subLink.href : "#"}
+                          className={`w-full tracking-wider py-2 px-4 flex flex-col gap-1 group uppercase text-sm text-dark ${pathName === subLink.href ? "bg-secondary text-white" : ""}`}
+                        >
+                          <span className="uppercase"> {subLink.label}</span>
+                        </Link>
+                      </span>
+                    );
+                  })}
+                </span>
+              )}
+            </li>
+          ))}
+        </ul>
+        <Link
+          href={contact.WhatsappCta}
+          className="lg:flex items-center gap-2 rounded-lg bg-white border px-4 md:px-6 py-2 md:py-3  text-primary transition-all hover:scale-x-105  xl hidden "
+        >
+          <span>
+            <BookingCalenderIcon />
+          </span>
+          Book Now
+        </Link>
+        <button className="lg:hidden" onClick={() => setIsOpenNavBar(true)}>
+          <IoMdMenu className="text-3xl" />
+          <span className="sr-only">menu</span>
+        </button>
+      </nav>
+      <MobileNav />
+    </header>
+  );
+};
+
+export default WebsiteNav;
