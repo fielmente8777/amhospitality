@@ -28,19 +28,19 @@ const WebsiteNav = () => {
             <li className=" relative nav" key={index}>
               <Link
                 href={item.href}
-                className={`text-dark font-semibold flex items-center gap-2 p-2 uppercase `}
+                className={`text-secondary text-[20px] flex items-center gap-2 p-2 `}
               >
                 {item.label}
                 <span
                   className={`bg-primary ${pathName === item.href ? "w-full" : "span-border"}`}
                 ></span>
-                {item.subLinks && (
+                {/* {item.subLinks && (
                   <span className="icon duration-300 transition-all ease-in-out">
                     <FillDropDownIcon />
                   </span>
-                )}
+                )} */}
               </Link>
-              {item.subLinks && (
+              {/* {item.subLinks && (
                 <span className="nav-1 backdrop-blur-md">
                   {item.subLinks.map((subLink, subIndex) => {
                     return (
@@ -58,18 +58,18 @@ const WebsiteNav = () => {
                     );
                   })}
                 </span>
-              )}
+              )} */}
             </li>
           ))}
         </ul>
         <Link
           href={contact.WhatsappCta}
-          className="lg:flex items-center gap-2 rounded-lg bg-white border px-4 md:px-6 py-2 md:py-3  text-primary transition-all hover:scale-x-105  xl hidden "
+          className="lg:flex items-center gap-2 rounded-4xl bg-white border px-4 md:px-6 py-2 md:py-3  text-primary transition-all hover:scale-x-105  xl hidden "
         >
           <span>
-            <BookingCalenderIcon />
+            {/* <BookingCalenderIcon /> */}
           </span>
-          Book Now
+          Book A Stay
         </Link>
         <button className="lg:hidden" onClick={() => setIsOpenNavBar(true)}>
           <IoMdMenu className="text-3xl" />

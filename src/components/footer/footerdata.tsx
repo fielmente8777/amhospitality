@@ -76,28 +76,28 @@ export const footerData: FooterData = {
   ],
 };
 
-export const SocialLinks = [
-  {
-    label: Object.keys(contact.socialMedia)[0],
-    href: contact.socialMedia.facebook,
-    icon: <FillFaceBookIcon />,
-  },
-  {
-    label: Object.keys(contact.socialMedia)[2],
-    href: contact.socialMedia.instagram,
-    icon: <OutLineInstagramIcon />,
-  },
-  // {
-  //   label: Object.keys(contact.socialMedia)[4],
-  //   href: contact.socialMedia.linkedin,
-  //   icon: <LinkedinIcon />,
-  // },
-  // {
-  //   label: Object.keys(contact.socialMedia)[5],
-  //   href: contact.socialMedia.twitter,
-  //   icon: <TwitterIcon />,
-  // },
-];
+// export const SocialLinks = [
+//   {
+//     label: Object.keys(contact.socialMedia)[0],
+//     href: contact.socialMedia.facebook,
+//     icon: <FillFaceBookIcon />,
+//   },
+//   {
+//     label: Object.keys(contact.socialMedia)[2],
+//     href: contact.socialMedia.instagram,
+//     icon: <OutLineInstagramIcon />,
+//   },
+//   // {
+//   //   label: Object.keys(contact.socialMedia)[4],
+//   //   href: contact.socialMedia.linkedin,
+//   //   icon: <LinkedinIcon />,
+//   // },
+//   // {
+//   //   label: Object.keys(contact.socialMedia)[5],
+//   //   href: contact.socialMedia.twitter,
+//   //   icon: <TwitterIcon />,
+//   // },
+// ];
 
 interface WebSiteFooterData {
   logo: string;
@@ -120,47 +120,80 @@ interface WebSiteFooterData {
 }
 
 export const webSiteFooterData: WebSiteFooterData = {
-  logo: "/logo.png",
-  description: "Reserve your luxury holiday!",
+  logo: "/images/footerlogo.png",
+  description: "",
+
   link: {
-    label: "Book Now",
-    href: contact.WhatsappCta,
+    label: "",
+    href: "",
   },
+
   lists: [
     {
-      links: SocialLinks,
+      title: "Explore",
+      links: [
+        {
+          label: "Wabi Sabi Resort",
+          href: "/wabi-sabi",
+        },
+        {
+          label: "The Blue Lake Resort",
+          href: "/the-blue-lake",
+        },
+      ],
     },
     {
-      title: "Quick Links",
+      title: "Important Links",
       links: [
         {
           label: "Home",
           href: "/",
         },
         {
-          label: "About Us",
-          href: "/about-us",
+          label: "Stays",
+          href: "/Stay",
         },
         {
-          label: "Gallery",
-          href: "/gallery",
+          label: "Events & Weddings",
+          href: "/events-weddings",
         },
         {
-          label: "Contact Us",
-          href: "/contact",
+          label: "Contact",
+          href: "/ContactUs",
         },
       ],
     },
     {
-      title: "Explore",
+      title: "Legal",
       links: [
         {
-          label: "Gachibowli Hotel",
-          href: "/locations/gachibowli-hotel/",
+          label: "Privacy Policy",
+          href: "/privacy-policy",
         },
         {
-          label: " Madhapur Apartment",
-          href: "/locations/madhapur-apartment/",
+          label: "Cancellation Policy",
+          href: "/cancellation-policy",
+        },
+        {
+          label: "Terms & Conditions",
+          href: "/terms-conditions",
+        },
+      ],
+    },
+    {
+      title: "Contact Details",
+      links: [
+        {
+          label: "Lorem ipsum dolor sit amet,\nconsectetur adipiscing elit.",
+          href: "#",
+        },
+        {
+          label: "+91 XXXXX XXXXX",
+          href: "tel:+91XXXXXXXXXX",
+        },
+        {
+          label: "info@demo.in",
+          href: "mailto:info@demo.in",
         },
       ],
     },
@@ -178,49 +211,49 @@ export interface ContactInfo {
   }[];
 }
 
-export const contactInfos: ContactInfo[] = [
-  {
-    title: contact.locations.gachibowli.location,
-    links: [
-      {
-        label: contact.locations.gachibowli.address,
-        href: contact.locations.gachibowli.addressLink,
-        icon: <FillLocationIcon />,
-      },
-      {
-        label: contact.phone[0],
-        href: "tel:" + contact.phone[0],
-        icon: <FillCallIcon />,
-      },
-      {
-        label: contact.email[0],
-        href: "mailto:" + contact.email[0],
-        label2: contact.email[1],
-        href2: "mailto:" + contact.email[1],
-        icon: <FillMailIcon />,
-      },
-    ],
-  },
-  {
-    title: contact.locations.gachibowli.location,
-    links: [
-      {
-        label: contact.locations.madhapur.address,
-        href: contact.locations.madhapur.addressLink,
-        icon: <FillLocationIcon />,
-      },
-      {
-        label: contact.phone[0],
-        href: "tel:" + contact.phone[0],
-        icon: <FillCallIcon />,
-      },
-      {
-        label: contact.email[0],
-        href: "mailto:" + contact.email[0],
-        label2: contact.email[1],
-        href2: "mailto:" + contact.email[1],
-        icon: <FillMailIcon />,
-      },
-    ],
-  },
-];
+// export const contactInfos: ContactInfo[] = [
+//   {
+//     title: contact.locations.gachibowli.location,
+//     links: [
+//       {
+//         label: contact.locations.gachibowli.address,
+//         href: contact.locations.gachibowli.addressLink,
+//         icon: <FillLocationIcon />,
+//       },
+//       {
+//         label: contact.phone[0],
+//         href: "tel:" + contact.phone[0],
+//         icon: <FillCallIcon />,
+//       },
+//       {
+//         label: contact.email[0],
+//         href: "mailto:" + contact.email[0],
+//         label2: contact.email[1],
+//         href2: "mailto:" + contact.email[1],
+//         icon: <FillMailIcon />,
+//       },
+//     ],
+//   },
+//   {
+//     title: contact.locations.gachibowli.location,
+//     links: [
+//       {
+//         label: contact.locations.madhapur.address,
+//         href: contact.locations.madhapur.addressLink,
+//         icon: <FillLocationIcon />,
+//       },
+//       {
+//         label: contact.phone[0],
+//         href: "tel:" + contact.phone[0],
+//         icon: <FillCallIcon />,
+//       },
+//       {
+//         label: contact.email[0],
+//         href: "mailto:" + contact.email[0],
+//         label2: contact.email[1],
+//         href2: "mailto:" + contact.email[1],
+//         icon: <FillMailIcon />,
+//       },
+//     ],
+//   },
+// ];

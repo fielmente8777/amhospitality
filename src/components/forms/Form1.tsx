@@ -1,13 +1,8 @@
 "use client";
 import { getDateInputLimits } from "@/hooks/getDateInputLimits";
 import useBookingForm from "@/hooks/useBookingForm";
-import {
-  CalendarIcon,
-  CallIcon,
-  MailIcon,
-  UserIcon
-} from "@/utils/formIcons";
-import { BookingCalenderIcon } from "@/utils/icons";
+import { CalendarIcon, CallIcon, MailIcon, UserIcon } from "@/utils/formIcons";
+import { BookIcon, BookingCalenderIcon } from "@/utils/icons";
 import React, { useState } from "react";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
@@ -62,7 +57,7 @@ const Form1 = ({ gridView }: Props) => {
   const formFields = [
     {
       name: "name",
-      label: "Name",
+      label: "Full Name",
       type: "text",
       value: formData.name,
       onChange: handleChange,
@@ -77,12 +72,12 @@ const Form1 = ({ gridView }: Props) => {
       icon: <CallIcon />,
     },
     {
-      name: "email",
-      label: "Email ID",
-      type: "email",
-      value: formData.email,
+      name: "hotel",
+      label: "Select Hotel/Resort",
+      type: "select",
+      value: formData.hotel,
       onChange: handleChange,
-      icon: <MailIcon />,
+      icon: <IoIosArrowDown />,
     },
     {
       name: "checkIn",
@@ -103,16 +98,15 @@ const Form1 = ({ gridView }: Props) => {
   return (
     <form
       onSubmit={handleSubmit}
-      className={`${gridView ? "flex flex-col gap-2" : "grid md:grid-cols-5 items-center gap-3.5 "} font-body px-4 bg-transparent  max-md:divide-y divide-p1`}
+      className={`${gridView ? "flex flex-col gap-2" : "grid md:grid-cols-5 items-center gap-3.5 "} font-body px-4 py-2 bg-white/75 rounded-4xl overflow-hidden max-md:divide-y divide-p1`}
     >
       {formFields.map((field, index) => (
         <React.Fragment key={index}>
           {field.type === "date" ? (
             <div
-              className={` flex items-center gap-2.5 lg:border-[0.5px] lg:shadow border-light/30 lg:rounded-lg ${gridView ? "p-4" : "max-md:pb-4 max-md:pt-2 py-3 lg:px-2"}`}
+              className={` flex items-center gap-2.5 lg:border-r  border-primary  ${gridView ? "p-4" : "max-md:pb-4 max-md:pt-2 py-3 lg:px-2"}`}
               key={index}
             >
-              <label className="text-secondary">{field.icon}</label>
               <DatePicker
                 selected={startDate}
                 onChange={handleDateChange}
@@ -124,19 +118,20 @@ const Form1 = ({ gridView }: Props) => {
                 placeholderText={field.label}
                 calendarClassName="!z-[99999]"
                 popperClassName="!z-[99999]"
-                className={` pointer-events-auto placeholder:text-secondarya outline-none w-full h-full bg-transparent text-base text-secondarya`}
+                className={` pointer-events-auto placeholder:text-secondary outline-none w-full h-full bg-transparent text-base text-secondary`}
                 wrapperClassName="w-full h-full !flex items-center"
               />
+              <label className="text-secondary">{field.icon}</label>
             </div>
           ) : field.type === "tel" ? (
             <div
-              className={`flex items-center gap-2.5 lg:border-[0.5px] lg:shadow border-light/30 lg:rounded-lg ${gridView ? "p-4" : "max-md:pb-4 max-md:pt-2 py-3 lg:px-2"}`}
+              className={`flex items-center gap-2.5 lg:border-r border-primary  ${gridView ? "p-4" : "max-md:pb-4 max-md:pt-2 py-3 lg:px-2"}`}
               key={index}
             >
               <label className="text-secondary">{field.icon}</label>
               <div className="relative">
                 <select
-                  className="ps-2 cursor-pointer border-p1 appearance-none w-full placeholder:text-secondarya focus:outline-none text-secondarya"
+                  className="ps-2 cursor-pointer border-none appearance-none w-full placeholder:text-secondary focus:outline-none text-secondary"
                   name="countryCode"
                   value={formData.countryCode}
                   onChange={(e) => setFieldValue("countryCode", e.target.value)}
@@ -150,33 +145,58 @@ const Form1 = ({ gridView }: Props) => {
                   ))}
                 </select>
                 <span className="absolute right-0 top-1/2 -translate-y-1/2 pointer-events-none">
-                  <IoIosArrowDown  />
+                  <IoIosArrowDown />
                 </span>
               </div>
               <input
                 type={field.type}
                 name={field.name}
                 placeholder={field.label}
-                className={`w-full placeholder:text-secondarya focus:outline-none text-secondarya `}
+                className={`w-full placeholder:text-secondary focus:outline-none text-secondary `}
                 value={field.value}
                 onChange={field.onChange}
               />
             </div>
+          ) : field.type === "select" ? (
+            <div
+              className={`flex items-center gap-2.5 lg:border-r border-primary  ${
+                gridView ? "p-4" : "max-md:pb-4 max-md:pt-2 py-3 lg:px-2"
+              }`}
+            >
+              <div className="relative w-full">
+                <select
+                  name={field.name}
+                  value={field.value}
+                  onChange={field.onChange}
+                  className="w-full appearance-none bg-transparent outline-none text-secondary pr-6"
+                >
+                  <option value="">Select Hotel/Resort</option>
+                  <option value="Blue Lake Resort">Blue Lake Resort</option>
+                  <option value="AM Hotels">AM Hotels</option>
+                </select>
+                <span className="absolute right-0 top-1/2 -translate-y-1/2 pointer-events-none">
+                  <IoIosArrowDown />
+                </span>
+                
+              </div>
+            </div>
           ) : (
             <div
-              className={`flex items-center gap-2.5 lg:border-[0.5px] lg:shadow border-light/30 lg:rounded-lg ${gridView ? "p-4" : "max-md:pb-4 max-md:pt-2 py-3 lg:px-2"}`}
+              className={`flex items-center gap-2.5 lg:border-r border-primary  ${gridView ? "p-4" : "max-md:pb-4 max-md:pt-2 py-3 lg:px-2"}`}
               key={index}
             >
-              <label className="text-secondary">{field.icon}</label>
+               <label className="text-secondary">{field.icon}</label>
+
               <input
                 key={index}
                 type={field.type}
                 name={field.name}
                 placeholder={field.label}
-                className={`w-full placeholder:text-secondarya focus:outline-none text-secondarya `}
+                className={`w-full placeholder:text-secondary focus:outline-none text-secondary `}
                 value={field.value}
                 onChange={field.onChange}
               />
+             
             </div>
           )}
 
@@ -187,16 +207,17 @@ const Form1 = ({ gridView }: Props) => {
       ))}
       <button
         type="submit"
-        className=" bg-primary w-full rounded-lg text-white text-lg py-3"
+        className=" bg-primary w-full rounded-4xl text-white text-lg py-3"
       >
         {isSubmitting ? (
           "Submitting..."
         ) : (
           <span className="flex items-center justify-center gap-2.5">
-            <span className="">
-              <BookingCalenderIcon />
-            </span>{" "}
+        
             Book Now{" "}
+            <span className="flex items-end">
+              <BookIcon />
+            </span>
           </span>
         )}
       </button>

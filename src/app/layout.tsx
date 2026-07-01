@@ -1,7 +1,10 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
-import "./style.css";
+import "./style.scss";
+
+import NavBar from "@/components/navbar/WebsiteNav";
+ import Footer from "@/components/footer/WebsiteFooter";
 
 const gilroy = localFont({
   src: [
@@ -53,7 +56,9 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${gilroy.variable} h-full antialiased`}>
       <body className="" suppressHydrationWarning={true}>
+        <NavBar />
         {children}
+        <Footer />
       </body>
     </html>
   );

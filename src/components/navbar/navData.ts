@@ -24,26 +24,27 @@ interface websiteNavLink {
 }
 
 export const WebsiteNavData: websiteNavLink = {
-  logo: "/logo.png",
+  logo: "/images/Logo.png",
   links: [
     { label: "Home", href: "/" },
-    { label: "About", href: "/about-us/" },
+   
     {
-      label: "Locations",
-      href: "/locations/",
+      label: "Stays",
+      href: "/Stay",
       subLinks: [
         {
-          label: "Gachibowli Hotel",
-          href: "/locations/gachibowli-hotel/",
+          label: "Wabi Sabi Resort",
+          href: "/wabi-sabi",
         },
         {
-          label: " Madhapur Apartment",
-          href: "/locations/madhapur-apartment/",
+          label: "The Blue Lake Resort",
+          href: "/blue-lake",
         },
       ],
     },
-    { label: "Gallery", href: "/gallery/" },
-    { label: "Contact", href: "/contact-us/" },
+    { label: "Meetings", href: "/meetings" },
+    { label: "Weddings", href: "/weddings" },
+    { label: "Contact", href: "/ContactUs" },
   ],
   buttons: [{ label: "BOOK NOW", href: contact.WhatsappCta }],
 };
