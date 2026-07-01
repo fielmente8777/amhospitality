@@ -11,7 +11,7 @@ interface Props {
 
 export default function Dining({ data }: Props) {
   return (
-    <section className="py-20">
+    <section className="">
       <div className="max_width">
         <SectionHeading title={data.title} />
         <p className="text-[20px] text-secondary">{data.subtitle}</p>

@@ -18,7 +18,7 @@ export default function ExploreMore({ data }: Props) {
         <SectionHeading title={data.title} />
         <p className="text-[20px] text-secondary">{data.subtitle}</p>
 
-        <div className="mt-8">
+        <div className="hidden md:block mt-8">
           <SwiperCarousel
             data={data.places}
             slidesPerView={1}
@@ -55,6 +55,44 @@ export default function ExploreMore({ data }: Props) {
                 ))}
               </div>
             )}
+          />
+        </div>
+        <div className="md:hidden mt-8">
+          <SwiperCarousel
+            data={data.places.flat()}
+            slidesPerView={1}
+            spaceBetween={24}
+            loop
+            modules={[Autoplay, Navigation]}
+            navigation
+            autoplay={{
+              delay: 2500,
+              disableOnInteraction: false,
+              pauseOnMouseEnter: true,
+            }}
+            breakpoints={{
+              768: {
+                slidesPerView: 1,
+              },
+            }}
+            renderSlide={(images) => {
+              console.log(images);
+              return (
+                <div className="">
+                  <div className="relative aspect-[2.5/3] ">
+                    <Image
+                      src={images.image}
+                      // alt={`Explore ${index + 1}`}
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                  {images.title && (
+                    <div className=" text-secondary py-2 text-lg">{images.title}</div>
+                  )}
+                </div>
+              )
+            }}
           />
         </div>
       </div>

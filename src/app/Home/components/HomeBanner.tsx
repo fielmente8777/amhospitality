@@ -26,7 +26,7 @@ export default function HomeBanner ({data}: Props) {
       {/* Content */}
       <div className="absolute inset-0 flex items-center justify-center">
         <div className="max_width flex flex-col items-center">
-          <h1 className="text-center text-5xl font-bold uppercase text-white">
+          <h1 className="text-center text-2xl md:text-5xl font-bold uppercase text-white">
             {data.title}
           </h1>
 

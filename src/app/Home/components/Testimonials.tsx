@@ -20,10 +20,15 @@ export default function Testimonials({ data }: Props) {
         <div className="mt-10">
           <SwiperCarousel
             data={data.testimonials}
-            slidesPerView={3}
+            slidesPerView={1}
             spaceBetween={32}
             navigation={true}
             swiperSlideClassName="py-10"
+             breakpoints={{
+              768: {
+                slidesPerView: 3,
+              },
+            }}
             renderSlide={(item) => (
               <div className="rounded-lg bg-white p-6 drop-shadow-xl">
                 <div className="mb-4 flex gap-1">
