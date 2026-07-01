@@ -8,7 +8,7 @@ export interface AboutUsProps {
   title: string;
   subtitle: string;
   description: string;
-  images: string[] [];
+  images: string[][];
 }
 
 export interface DiningProps {
@@ -39,12 +39,12 @@ export interface TestimonialProps {
   }[];
 }
 
-export interface HospitalityProps{
-  title:string;
-  card:{
-    subtitle:string;
-    description:string;
-}[];
+export interface HospitalityProps {
+  title: string;
+  card: {
+    subtitle: string;
+    description: string;
+  }[];
 }
 export const HomeBannerData = {
   image: "/images/homebg.jpg",
@@ -59,15 +59,9 @@ export const AboutUsData = {
   subtitle: "Beyond Stays, We Create Memories.",
 
   images: [
-   ["/images/about1.jpg",
-    "/images/about2.jpg",
-    "/images/about3.jpg",],
-   [ "/images/about1.jpg",
-    "/images/about2.jpg",
-    "/images/about3.jpg",],
-    ["/images/about1.jpg",
-    "/images/about2.jpg",
-    "/images/about3.jpg",],
+    ["/images/about1.jpg", "/images/about2.jpg", "/images/about3.jpg"],
+    ["/images/about1.jpg", "/images/about2.jpg", "/images/about3.jpg"],
+    ["/images/about1.jpg", "/images/about2.jpg", "/images/about3.jpg"],
   ],
   description:
     'AM Hotels & Resorts is a curated collection of extraordinary hospitality experiences designed for discerning travelers who seek serenity, beauty, and exceptional service. Rooted in a passion for authentic stays and memorable escapes, our portfolio places you in hand-picked destinations that celebrate nature, comfort, and local charm. From the tranquil lakeside ambience of <strong class="font-semibold" >The Blue Lake Resort</strong> in Igatpuri to the thoughtfully crafted retreat at <b class="font-semibold">Wabi Sabi Resorts</b>, every property reflects our commitment to genuine warmth, thoughtful design, and seamless guest experiences. At AM Hotels & Resorts, we believe travel should rejuvenate the spirit and create lasting memories — because your journey deserves nothing less than remarkable.',
@@ -97,22 +91,24 @@ export const ExploreMoreData = {
   subtitle: "Journey Through Nearby Wonders.",
 
   places: [
-    {
-      image: "/images/explore1.jpg",
-      title: "Vaitarna Dam",
-    },
-    {
-      image: "/images/explore2.jpg",
-      title: "Brahmagiri Hill",
-    },
-    {
-      image: "/images/explore3.jpg",
-      title: "Durga Bhandar",
-    },
-    {
-      image: "/images/explore4.jpg",
-      title: "Pandav Leni",
-    },
+    [
+      {
+        image: "/images/explore1.png",
+        title: "Vaitarna Dam",
+      },
+      {
+        image: "/images/explore2.jpg",
+        title: "Brahmagiri Hill",
+      },
+      {
+        image: "/images/explore3.jpg",
+        title: "Durga Bhandar",
+      },
+      {
+        image: "/images/explore4.jpg",
+        title: "Pandav Leni",
+      },
+    ],
   ],
 };
 
@@ -140,30 +136,27 @@ export const TestimonialsData = {
       name: "Lorem Ipsum",
     },
   ],
-
-
 };
 
- export const HospitalityData = {
-    title:"Hospitality Rooted in Experience",
-  
-    card:[
-      {
-        subtitle:"24x7",
-        description:"Great Support",
-      },
-      {
-        subtitle:"10+ Years",
-        description:"Hospitality Excellence",
-      },
-      {
-        subtitle:"100%",
-        description:"Guest Satisfaction Focus",
-      },
-      {
-        subtitle:"100+",
-        description:"Events Hosted",
-      },
-    ],
-    
- };
+export const HospitalityData = {
+  title: "Hospitality Rooted in Experience",
+
+  card: [
+    {
+      subtitle: "24x7",
+      description: "Great Support",
+    },
+    {
+      subtitle: "10+ Years",
+      description: "Hospitality Excellence",
+    },
+    {
+      subtitle: "100%",
+      description: "Guest Satisfaction Focus",
+    },
+    {
+      subtitle: "100+",
+      description: "Events Hosted",
+    },
+  ],
+};

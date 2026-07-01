@@ -24,13 +24,13 @@ export default function ContactInfo({ data }: Props) {
         />
       </div>
 
-      <div className="grid md:grid-cols-3 bg-[#F8F6F3]">
+      <div className="grid md:grid-cols-3 bg-background2 py-12 ">
         {data.cards.map((item, index) => (
           <div
             key={index}
-            className="py-8 text-center border-r last:border-r-0 border-[#D9C8B2]"
+            className="py-8 text-center border-r last:border-r-0 border-primary px-10"
           >
-            <h3 className="font-semibold text-primary">
+            <h3 className="font-semibold text-[32px] text-primary">
               {item.title}
             </h3>
 

@@ -10,7 +10,7 @@ interface Props {
 
 export default function StayBanner({ data }: Props) {
   return (
-    <section className="relative h-[500px] overflow-hidden">
+    <section className="relative aspect-[5/2] overflow-hidden">
       <Image
         src={data.image}
         alt={data.title}
@@ -21,9 +21,9 @@ export default function StayBanner({ data }: Props) {
 
       <div className="absolute inset-0 bg-black/40" />
 
-      <div className="absolute inset-0 flex items-center justify-center">
-        <div className="max_width">
-          <h1 className="text-center text-5xl font-bold uppercase text-white">
+      <div className="absolute inset-0 flex items-end justify-center py-20">
+        <div className="max_width space-y-10">
+          <h1 className="text-center text-5xl font-bold uppercase text-white ">
             {data.title}
           </h1>
           <div>

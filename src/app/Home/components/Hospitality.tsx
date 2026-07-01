@@ -9,14 +9,14 @@ interface Props {
 export default function Hospitality({ data }: Props) {
   console.log(data);
   return (
-    <div className="bg-black text-white text-center py-15 max_screen_width">
+    <div className="bg-secondary text-white text-center py-15 max_screen_width">
       <SectionHeading title={data.title} />
 
       <div className="grid grid-cols-4 mt-10">
         {data.card.map((card,index) =>
           ( 
             <div>
-             <p>{card.subtitle}</p>
+             <p className="text-xl font-semibold">{card.subtitle}</p>
              <p>{card.description}</p>
             </div>    
           )

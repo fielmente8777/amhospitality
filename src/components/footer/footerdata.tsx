@@ -134,11 +134,11 @@ export const webSiteFooterData: WebSiteFooterData = {
       links: [
         {
           label: "Wabi Sabi Resort",
-          href: "/wabi-sabi",
+          href: "/Stay/wabi-sabi",
         },
         {
           label: "The Blue Lake Resort",
-          href: "/the-blue-lake",
+          href: "/Stay/blue-lake",
         },
       ],
     },

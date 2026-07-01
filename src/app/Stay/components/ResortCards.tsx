@@ -12,11 +12,11 @@ export default function ResortCards({ data }: Props) {
   return (
     <section className="py-20">
       <div className="max_width">
-        <div className="grid lg:grid-cols-2">
+        <div className="grid lg:grid-cols-2 gap-5 ">
           {data.map((item, index) => (
             <div
               key={index}
-              className="overflow-hidden rounded-lg bg-white shadow-md"
+              className="overflow-hidden bg-white"
             >
               <div className="relative aspect-[3/2]">
                 <Image
@@ -27,7 +27,7 @@ export default function ResortCards({ data }: Props) {
                 />
               </div>
 
-              <div className="p-6">
+               <div className="relative z-10 mx-5 -mt-12 bg-white p-6 drop-shadow-lg">
                 <h2 className="text-2xl font-bold uppercase">{item.title}</h2>
 
                 <p className="mt-4 text-sm leading-7 text-gray-600">

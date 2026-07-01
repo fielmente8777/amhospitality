@@ -11,7 +11,7 @@ interface Props {
 
 export default function Testimonials({ data }: Props) {
   return (
-    <section className="py-20">
+    <section className="">
       <div className="max_width">
         
         <SectionHeading title={data.title} />
@@ -23,9 +23,9 @@ export default function Testimonials({ data }: Props) {
             slidesPerView={3}
             spaceBetween={32}
             navigation={true}
-            swiperSlideClassName="!h-auto"
+            swiperSlideClassName="py-10"
             renderSlide={(item) => (
-              <div className="rounded-lg bg-white p-6 shadow-md">
+              <div className="rounded-lg bg-white p-6 drop-shadow-xl">
                 <div className="mb-4 flex gap-1">
                   {Array.from({ length: item.rating }).map((_, index) => (
                     <StarIconOrange/>

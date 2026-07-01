@@ -56,7 +56,7 @@ export default function Accommodation({ data }: Props) {
                     </div>
 
                     {/* Content */}
-                    <div className="relative z-10 mx-5 -mt-12 bg-white p-6 shadow-lg">
+                    <div className="relative z-10 mx-5 -mt-12 bg-white p-6 drop-shadow-lg">
                       <h3 className="text-[32px] font-medium uppercase">
                         {item.title}
                       </h3>

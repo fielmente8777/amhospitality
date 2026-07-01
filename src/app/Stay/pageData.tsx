@@ -77,13 +77,13 @@ export interface OfferProps {
 }
 
 export const StayBannerData: StayBannerProps = {
-  image: "/images/stay-banner.jpg",
+  image: "/images/stay.jpg",
   title: "EXPLORE OUR RESORTS",
 };
 
 export const ResortCardsData: ResortCard[] = [
   {
-    image: "/images/bluelake.jpg",
+    image: "/images/stay1.jpg",
     title: "THE BLUE LAKE RESORT",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit.",
@@ -93,7 +93,7 @@ export const ResortCardsData: ResortCard[] = [
     morehref:"/ContactUs"
   },
   {
-    image: "/images/wabisabi.jpg",
+    image: "/images/stay2.jpg",
     title: "WABI SABI RESORT",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit.",
@@ -109,7 +109,7 @@ export const ResortPageData = [
     slug: "wabi-sabi",
 
     banner: {
-      image: "/images/wabi-banner.jpg",
+      image: "/images/stay2.jpg",
       title: "WABI SABI RESORT",
     },
 
@@ -244,7 +244,7 @@ export const ResortPageData = [
     slug: "blue-lake",
 
     banner: {
-      image: "/images/bluelake-banner.jpg",
+      image: "/images/stay1.jpg",
       title: "THE BLUE LAKE RESORT",
     },
 
