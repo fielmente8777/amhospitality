@@ -23,13 +23,13 @@ export default function ExclusiveOffer({ data }: Props) {
           fill
           className="object-cover"
         />
-        <div className="absolute inset-0 bg-black/40" />
+        <div className="absolute inset-0 bg-black/60" />
       </div>
 
       <div className="relative z-10 max_width">
         <div className="grid grid-cols-1 lg:grid-cols-2 items-center">
           {/* Left Image */}
-          <div className="relative aspect-[4/3] lg:aspect-[3/2]">
+          <div className="relative hidden md:block aspect-4/3 lg:aspect-3/2">
             <Image
               src={data.image}
               alt={data.title}
@@ -39,15 +39,15 @@ export default function ExclusiveOffer({ data }: Props) {
           </div>
 
           {/* Content */}
-          <div className="bg-white  aspect-[4/3] lg:aspect-[3/2] px-12 py-10 ">
+          <div className="bg-white  aspect-4/3 lg:aspect-3/2 px-6 md:px-12 py-5 md:py-10 ">
             <SectionHeading title={data.title} />
 
             <p className="mt-6  text-secondary">{data.description}</p>
 
-            <div className="mt-10 flex items-center justify-between">
+            <div className="mt-10 flex items-center justify-between max-md:gap-2">
               <Link
                 href={data.bookNowButton.href}
-                className="inline-flex items-center justify-center rounded-full bg-primary text-white px-8 py-3 min-w-[170px] font-medium transition hover:opacity-90"
+                className="inline-flex items-center justify-center rounded-full bg-primary text-white px-6 md:px-8 py-3 md:min-w-[170px] font-medium transition hover:opacity-90"
               >
                 {data.bookNowButton.text}
               </Link>
@@ -58,7 +58,7 @@ export default function ExclusiveOffer({ data }: Props) {
               >
                 {data.contactButton.text}
                 <span>
-                  <FArrowIcon/>
+                  <FArrowIcon />
                 </span>
               </Link>
             </div>

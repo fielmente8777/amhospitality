@@ -14,7 +14,7 @@ const LandingNavbar = () => {
             <div className="relative h-10 w-32 md:h-12 md:w-44">
               <Image
                 src={navData.logo}
-                alt="The Rudraksh Retreat"
+                alt="The Am hospitality"
                 fill
                 priority
                 className="object-contain"

@@ -22,7 +22,7 @@ export default function AboutResort({ data }: Props) {
           <SwiperCarousel
               data={[data.images]}
             slidesPerView={1}
-            spaceBetween={24}
+            spaceBetween={14}
             loop
             modules={[Autoplay, Navigation]}
             navigation
@@ -39,6 +39,7 @@ export default function AboutResort({ data }: Props) {
             renderSlide={(images) => {
               return (
                 <div className="grid grid-cols-[240px_minmax(0,1fr)_240px] gap-4 h-[420px]">
+                {/* <div className="grid grid-cols-[240px_minmax(0,1fr)_240px] gap-4 h-[420px]"> */}
                   {images.map((img, index) => (
                     <div
                       key={index}

@@ -11,11 +11,11 @@ import { WebsiteNavData } from "./navData";
 
 const WebsiteNav = () => {
   const pathName = usePathname();
-  const { setIsOpenNavBar } = useWebContext();
+  const { setIsOpenNavBar, isOpenNavBar } = useWebContext();
   return (
     <header className={`max_screen_width  background-color-1`}>
       <nav className="flex items-center justify-between py-4 max_width">
-        <Link href="/" className="block relative md:w-40 w-40 aspect-[3/2]">
+        <Link href="/" className="block relative md:w-40 w-30 aspect-3/2">
           <Image
             src={WebsiteNavData.logo}
             alt="logo"
@@ -69,7 +69,7 @@ const WebsiteNav = () => {
           <span>{/* <BookingCalenderIcon /> */}</span>
           Book A Stay
         </Link>
-        <button className="lg:hidden" onClick={() => setIsOpenNavBar(true)}>
+        <button className="lg: border" onClick={() => setIsOpenNavBar(true)}>
           <IoMdMenu className="text-3xl" />
           <span className="sr-only">menu</span>
         </button>

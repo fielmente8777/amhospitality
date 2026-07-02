@@ -28,7 +28,7 @@ export default function ContactInfo({ data }: Props) {
             {data.cards.map((item, index) => (
               <div
                 key={index}
-                className="py-8 text-center border-r last:border-r-0 border-primary px-10"
+                className="py-8 text-center md:border-r last:border-r-0 border-primary px-10"
               >
                 <h3 className="font-semibold text-[32px] text-primary">
                   {item.title}

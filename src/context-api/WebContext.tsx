@@ -37,7 +37,7 @@ interface WebContextType {
   amenityModalArray: OpenAmenityModalArray[];
   setAmenityModalArray: (array: OpenAmenityModalArray[]) => void;
 
-  
+
   openGallery: ({ images, index }: OpenGalleryProps) => void;
 
   closeGallery: () => void;
@@ -45,35 +45,34 @@ interface WebContextType {
 
 const WebContext = createContext<WebContextType>({
   isOpenNavBar: false,
-  setIsOpenNavBar: () => {},
-
+  setIsOpenNavBar: () => { },
   openImageModal: false,
-  setOpenImageModal: () => {},
+  setOpenImageModal: () => { },
 
   passImagesArray: [],
-  setPassImagesArray: () => {},
+  setPassImagesArray: () => { },
 
   imageCurrentIndex: 0,
-  setImageCurrentIndex: () => {},
+  setImageCurrentIndex: () => { },
 
   openAmenityModal: false,
-  setOpenAmenityModal: () => {},
+  setOpenAmenityModal: () => { },
 
   amenityModalArray: [],
-  setAmenityModalArray: () => {},
+  setAmenityModalArray: () => { },
 
   isOpenFormPopUp: false,
-  setIsOpenFormPopUp: () => {},
+  setIsOpenFormPopUp: () => { },
 
-  openGallery: () => {},
+  openGallery: () => { },
 
-  closeGallery: () => {},
+  closeGallery: () => { },
 
   current: 0,
   total: 0,
 
-  setCurrent: () => {},
-  setTotal: () => {},
+  setCurrent: () => { },
+  setTotal: () => { },
 });
 
 interface WebProviderProps {
