@@ -6,6 +6,7 @@ import AmenityPopUpButton from "@/components/pop-up/AmenityPopUpButton";
 import { SectionHeading } from "@/components/typography";
 import { AccommodationProps } from "../pageData";
 import { Autoplay, Navigation } from "swiper/modules";
+import SectionWithContainer from "@/components/sectionComponants/SectionWithContainer";
 
 interface Props {
   data: AccommodationProps;
@@ -14,8 +15,8 @@ interface Props {
 export default function Accommodation({ data }: Props) {
   console.log(data);
   return (
-    <section className="py-20">
-      <div className="max_width">
+    <SectionWithContainer sectionClassName="">
+      
         <SectionHeading title={data.title} />
         <p className="text-[20px] text-secondary">{data.subtitle}</p>
 
@@ -56,7 +57,7 @@ export default function Accommodation({ data }: Props) {
                     </div>
 
                     {/* Content */}
-                    <div className="relative z-10 mx-5 -mt-12 bg-white p-6 drop-shadow-lg">
+                    <div className="relative z-10 mx-5 -mt-12 bg-white p-6 box-shadow">
                       <h3 className="text-[32px] font-medium uppercase">
                         {item.title}
                       </h3>
@@ -86,7 +87,7 @@ export default function Accommodation({ data }: Props) {
             )}
           />
         </div>
-      </div>
-    </section>
+     
+    </SectionWithContainer>
   );
 }

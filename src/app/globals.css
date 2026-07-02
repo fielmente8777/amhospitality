@@ -5,6 +5,7 @@
   --p2: #222222;
   --bg: #EDEDED;
   --bg2: #F6F5F5;
+  --f1: #E9E1D8;
 }
 
 @theme inline {
@@ -12,6 +13,7 @@
   --color-background2: #F6F5F5;
   --color-primary: #80572E;
   --color-secondary: #222222;
+  --color-footer1: #E9E1D8;
 }
 
 

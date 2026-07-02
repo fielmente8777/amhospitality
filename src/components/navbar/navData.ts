@@ -30,21 +30,21 @@ export const WebsiteNavData: websiteNavLink = {
    
     {
       label: "Stays",
-      href: "/Stay",
+      href: "/stay",
       subLinks: [
         {
           label: "Wabi Sabi Resort",
-          href: "/wabi-sabi",
+          href: "/stay/wabi-sabi",
         },
         {
           label: "The Blue Lake Resort",
-          href: "/blue-lake",
+          href: "/stay/blue-lake",
         },
       ],
     },
     { label: "Meetings", href: "/meetings" },
     { label: "Weddings", href: "/weddings" },
-    { label: "Contact", href: "/ContactUs" },
+    { label: "Contact", href: "/contact-us" },
   ],
   buttons: [{ label: "BOOK NOW", href: contact.WhatsappCta }],
 };

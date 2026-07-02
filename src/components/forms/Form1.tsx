@@ -2,7 +2,7 @@
 import { getDateInputLimits } from "@/hooks/getDateInputLimits";
 import useBookingForm from "@/hooks/useBookingForm";
 import { CalendarIcon, CallIcon, MailIcon, UserIcon } from "@/utils/formIcons";
-import { BookIcon, BookingCalenderIcon } from "@/utils/icons";
+import { BArrowIcon, BookIcon, BookingCalenderIcon } from "@/utils/icons";
 import React, { useState } from "react";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
@@ -77,7 +77,7 @@ const Form1 = ({ gridView }: Props) => {
       type: "select",
       value: formData.hotel,
       onChange: handleChange,
-      icon: <IoIosArrowDown />,
+      icon: <BArrowIcon />,
     },
     {
       name: "checkIn",
@@ -107,6 +107,7 @@ const Form1 = ({ gridView }: Props) => {
               className={` flex items-center gap-2.5 lg:border-r  border-primary  ${gridView ? "p-4" : "max-md:pb-4 max-md:pt-2 py-3 lg:px-2"}`}
               key={index}
             >
+              <label className="text-secondary">{field.icon}</label>
               <DatePicker
                 selected={startDate}
                 onChange={handleDateChange}
@@ -121,7 +122,6 @@ const Form1 = ({ gridView }: Props) => {
                 className={` pointer-events-auto placeholder:text-secondary outline-none w-full h-full bg-transparent text-base text-secondary`}
                 wrapperClassName="w-full h-full !flex items-center"
               />
-              <label className="text-secondary">{field.icon}</label>
             </div>
           ) : field.type === "tel" ? (
             <div
@@ -145,7 +145,7 @@ const Form1 = ({ gridView }: Props) => {
                   ))}
                 </select>
                 <span className="absolute right-0 top-1/2 -translate-y-1/2 pointer-events-none">
-                  <IoIosArrowDown />
+                  <BArrowIcon />
                 </span>
               </div>
               <input
@@ -167,7 +167,7 @@ const Form1 = ({ gridView }: Props) => {
                 <select
                   name={field.name}
                   value={field.value}
-                  onChange={field.onChange}
+                  onChange={(e) => setFieldValue(field.name, e.target.value)}
                   className="w-full appearance-none bg-transparent outline-none text-secondary pr-6"
                 >
                   <option value="">Select Hotel/Resort</option>
@@ -175,9 +175,8 @@ const Form1 = ({ gridView }: Props) => {
                   <option value="AM Hotels">AM Hotels</option>
                 </select>
                 <span className="absolute right-0 top-1/2 -translate-y-1/2 pointer-events-none">
-                  <IoIosArrowDown />
+                  <BArrowIcon />
                 </span>
-                
               </div>
             </div>
           ) : (
@@ -185,7 +184,7 @@ const Form1 = ({ gridView }: Props) => {
               className={`flex items-center gap-2.5 lg:border-r border-primary  ${gridView ? "p-4" : "max-md:pb-4 max-md:pt-2 py-3 lg:px-2"}`}
               key={index}
             >
-               <label className="text-secondary">{field.icon}</label>
+              <label className="text-secondary">{field.icon}</label>
 
               <input
                 key={index}
@@ -196,7 +195,6 @@ const Form1 = ({ gridView }: Props) => {
                 value={field.value}
                 onChange={field.onChange}
               />
-             
             </div>
           )}
 
@@ -213,7 +211,6 @@ const Form1 = ({ gridView }: Props) => {
           "Submitting..."
         ) : (
           <span className="flex items-center justify-center gap-2.5">
-        
             Book Now{" "}
             <span className="flex items-end">
               <BookIcon />

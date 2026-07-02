@@ -6,6 +6,7 @@ import LinkButton, { ArrowIcon } from "@/components/buttons/LinkButton";
 import { OfferProps } from "../pageData";
 import SectionHeading from "@/components/typography/SectionHeading";
 import { FArrowIcon } from "@/utils/icons";
+import SectionWithContainer from "@/components/sectionComponants/SectionWithContainer";
 
 interface Props {
   data: OfferProps;
@@ -13,7 +14,7 @@ interface Props {
 
 export default function ExclusiveOffer({ data }: Props) {
   return (
-    <section className="relative py-20">
+    <SectionWithContainer sectionClassName="relative">
       {/* Background Image */}
       <div className="absolute inset-0">
         <Image
@@ -64,6 +65,6 @@ export default function ExclusiveOffer({ data }: Props) {
           </div>
         </div>
       </div>
-    </section>
+    </SectionWithContainer>
   );
 }

@@ -1,8 +1,9 @@
-"use client";
+
 
 import Image from "next/image";
 import Link from "next/link";
 import { ResortCard } from "../pageData";
+import { SectionWithContainer } from "@/components/sectionComponants";
 
 interface Props {
   data: ResortCard[];
@@ -10,13 +11,13 @@ interface Props {
 
 export default function ResortCards({ data }: Props) {
   return (
-    <section className="py-20">
-      <div className="max_width">
+    <SectionWithContainer sectionClassName="">
+      
         <div className="grid lg:grid-cols-2 gap-5 ">
           {data.map((item, index) => (
             <div
               key={index}
-              className="overflow-hidden bg-white"
+              className="overflow-hidden bg-white py-8"
             >
               <div className="relative aspect-[3/2]">
                 <Image
@@ -27,7 +28,7 @@ export default function ResortCards({ data }: Props) {
                 />
               </div>
 
-               <div className="relative z-10 mx-5 -mt-12 bg-white p-6 drop-shadow-lg">
+               <div className="relative z-10 mx-5 -mt-12 bg-white p-6 box-shadow">
                 <h2 className="text-2xl font-bold uppercase">{item.title}</h2>
 
                 <p className="mt-4 text-sm leading-7 text-gray-600">
@@ -53,7 +54,7 @@ export default function ResortCards({ data }: Props) {
             </div>
           ))}
         </div>
-      </div>
-    </section>
+      
+    </SectionWithContainer>
   );
 }

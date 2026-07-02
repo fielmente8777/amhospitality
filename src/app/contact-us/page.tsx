@@ -6,10 +6,10 @@ import { ContactHeroData, ContactInfoData } from "./pageData";
 
 export default function ContactPage() {
   return (
-    <>
+    <main>
       <ContactHero data={ContactHeroData} />
       <ContactInfo data={ContactInfoData} />
       <Form2 />
-    </>
+    </main>
   );
 }

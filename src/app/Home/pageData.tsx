@@ -14,10 +14,10 @@ export interface AboutUsProps {
 export interface DiningProps {
   title: string;
   subtitle: string;
-  images: {
+  slides: {
     image: string;
     alt: string;
-  }[];
+  }[][];
 }
 
 export interface ExploreMoreProps {
@@ -70,19 +70,33 @@ export const AboutUsData = {
 export const DiningData = {
   title: "DINING",
   subtitle: "An Experience in Every Bite.",
-  images: [
-    {
-      image: "/images/dining1.jpg",
-      alt: "Dining Image 1",
-    },
-    {
-      image: "/images/dining2.jpg",
-      alt: "Dining Image 2",
-    },
-    {
-      image: "/images/dining3.jpg",
-      alt: "Dining Image 3",
-    },
+  slides: [
+    [
+      {
+        image: "/images/dining1.jpg",
+        alt: "Dining Image 1",
+      },
+      {
+        image: "/images/dining2.jpg",
+        alt: "Dining Image 2",
+      },
+      {
+        image: "/images/dining1.jpg",
+        alt: "Dining Image 3",
+      },],
+      [{
+        image: "/images/dining2.jpg",
+        alt: "Dining Image 4",
+      },
+      {
+        image: "/images/dining1.jpg",
+        alt: "Dining Image 5",
+      },
+      {
+        image: "/images/dining2.jpg",
+        alt: "Dining Image 6",
+      },
+    ],
   ],
 };
 
@@ -91,24 +105,39 @@ export const ExploreMoreData = {
   subtitle: "Journey Through Nearby Wonders.",
 
   places: [
-    [
-      {
-        image: "/images/explore1.png",
-        title: "Vaitarna Dam",
-      },
-      {
-        image: "/images/explore2.jpg",
-        title: "Brahmagiri Hill",
-      },
-      {
-        image: "/images/explore3.jpg",
-        title: "Durga Bhandar",
-      },
-      {
-        image: "/images/explore4.jpg",
-        title: "Pandav Leni",
-      },
-    ],
+    {
+      image: "/images/explore1.png",
+      title: "Vaitarna Dam",
+    },
+    {
+      image: "/images/explore2.jpg",
+      title: "Brahmagiri Hill",
+    },
+    {
+      image: "/images/explore3.jpg",
+      title: "Durga Bhandar",
+    },
+    {
+      image: "/images/explore4.jpg",
+      title: "Pandav Leni",
+    },
+
+    {
+      image: "/images/explore1.png",
+      title: "Vaitarna Dam",
+    },
+    {
+      image: "/images/explore2.jpg",
+      title: "Brahmagiri Hill",
+    },
+    {
+      image: "/images/explore3.jpg",
+      title: "Durga Bhandar",
+    },
+    {
+      image: "/images/explore4.jpg",
+      title: "Pandav Leni",
+    },
   ],
 };
 

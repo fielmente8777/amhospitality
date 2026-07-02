@@ -4,6 +4,7 @@ import { SectionHeading } from "@/components/typography";
 import SwiperCarousel from "@/components/sliders/SwiperCarousel";
 import { StarIcon, StarIconOrange } from "@/utils/icons";
 import { TestimonialProps } from "../pageData";
+import SectionWithContainer from "@/components/sectionComponants/SectionWithContainer";
 
 interface Props {
   data: TestimonialProps;
@@ -11,8 +12,8 @@ interface Props {
 
 export default function Testimonials({ data }: Props) {
   return (
-    <section className="">
-      <div className="max_width">
+    <SectionWithContainer sectionClassName="">
+      
         
         <SectionHeading title={data.title} />
         <p className="text-[20px] text-secondary">{data.subtitle}</p>
@@ -48,7 +49,7 @@ export default function Testimonials({ data }: Props) {
             )}
           />
         </div>
-      </div>
-    </section>
+     
+    </SectionWithContainer>
   );
 }

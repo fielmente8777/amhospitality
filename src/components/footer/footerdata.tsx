@@ -134,11 +134,11 @@ export const webSiteFooterData: WebSiteFooterData = {
       links: [
         {
           label: "Wabi Sabi Resort",
-          href: "/Stay/wabi-sabi",
+          href: "/stay/wabi-sabi",
         },
         {
           label: "The Blue Lake Resort",
-          href: "/Stay/blue-lake",
+          href: "/stay/blue-lake",
         },
       ],
     },
@@ -151,7 +151,7 @@ export const webSiteFooterData: WebSiteFooterData = {
         },
         {
           label: "Stays",
-          href: "/Stay",
+          href: "/stay",
         },
         {
           label: "Events & Weddings",
@@ -159,7 +159,7 @@ export const webSiteFooterData: WebSiteFooterData = {
         },
         {
           label: "Contact",
-          href: "/ContactUs",
+          href: "/contact-us",
         },
       ],
     },
@@ -211,49 +211,3 @@ export interface ContactInfo {
   }[];
 }
 
-// export const contactInfos: ContactInfo[] = [
-//   {
-//     title: contact.locations.gachibowli.location,
-//     links: [
-//       {
-//         label: contact.locations.gachibowli.address,
-//         href: contact.locations.gachibowli.addressLink,
-//         icon: <FillLocationIcon />,
-//       },
-//       {
-//         label: contact.phone[0],
-//         href: "tel:" + contact.phone[0],
-//         icon: <FillCallIcon />,
-//       },
-//       {
-//         label: contact.email[0],
-//         href: "mailto:" + contact.email[0],
-//         label2: contact.email[1],
-//         href2: "mailto:" + contact.email[1],
-//         icon: <FillMailIcon />,
-//       },
-//     ],
-//   },
-//   {
-//     title: contact.locations.gachibowli.location,
-//     links: [
-//       {
-//         label: contact.locations.madhapur.address,
-//         href: contact.locations.madhapur.addressLink,
-//         icon: <FillLocationIcon />,
-//       },
-//       {
-//         label: contact.phone[0],
-//         href: "tel:" + contact.phone[0],
-//         icon: <FillCallIcon />,
-//       },
-//       {
-//         label: contact.email[0],
-//         href: "mailto:" + contact.email[0],
-//         label2: contact.email[1],
-//         href2: "mailto:" + contact.email[1],
-//         icon: <FillMailIcon />,
-//       },
-//     ],
-//   },
-// ];

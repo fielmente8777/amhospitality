@@ -1,101 +1,61 @@
 "use client";
 
-import Image from "next/image";
+import { SectionWithContainer } from "@/components/sectionComponants";
 import SwiperCarousel from "@/components/sliders/SwiperCarousel";
 import { SectionHeading } from "@/components/typography";
-import { ExploreMoreProps } from "../pageData";
+import Image from "next/image";
 import { Autoplay, Navigation } from "swiper/modules";
+import { ExploreMoreProps } from "../pageData";
 
-interface Props {
-  data: ExploreMoreProps;
-}
+// interface ExploreMoreProps{
+//   data: ExploreMoreProps;
+// }
 
-export default function ExploreMore({ data }: Props) {
-  console.log(data);
+export default function ExploreMore({
+  places,
+  subtitle,
+  title,
+}: ExploreMoreProps) {
   return (
-    <section className="py-20">
-      <div className="max_width">
-        <SectionHeading title={data.title} />
-        <p className="text-[20px] text-secondary">{data.subtitle}</p>
+    <SectionWithContainer sectionClassName="">
+      <SectionHeading title={title} />
+      <p className="text-[20px] text-secondary">{subtitle}</p>
 
-        <div className="hidden md:block mt-8">
-          <SwiperCarousel
-            data={data.places}
-            slidesPerView={1}
-            spaceBetween={24}
-            loop
-            modules={[Autoplay, Navigation]}
-            navigation
-            autoplay={{
-              delay: 2500,
-              disableOnInteraction: false,
-              pauseOnMouseEnter: true,
-            }}
-            breakpoints={{
-              768: {
-                slidesPerView: 1,
-              },
-            }}
-            renderSlide={(images) => (
-              <div className="grid grid-cols-4 gap-6">
-                {images.map((img, index) => (
-                  <div key={index} className="">
-                    <div className="relative aspect-[2.5/3] ">
-                      <Image
-                        src={img.image}
-                        alt={`Explore ${index + 1}`}
-                        fill
-                        className="object-cover"
-                      />
-                    </div>
-                    {img.title && (
-                      <div className=" text-secondary py-2 text-lg">{img.title}</div>
-                    )}
-                  </div>
-                ))}
+      <div className=" mt-8">
+        <SwiperCarousel
+          data={places}
+          slidesPerView={1}
+          spaceBetween={24}
+          loop
+          modules={[Autoplay, Navigation]}
+          navigation
+          autoplay={{
+            delay: 2500,
+            disableOnInteraction: false,
+            pauseOnMouseEnter: true,
+          }}
+          breakpoints={{
+            768: {
+              slidesPerView: 4,
+            },
+          }}
+          renderSlide={(item) => (
+            <div className="flex flex-col gap-6">
+              <div className="relative aspect-[2.5/3] ">
+                <Image
+                  src={item.image}
+                  // alt={`Explore ${index + 1}`}
+                  fill
+                  className="object-cover"
+                />
               </div>
-            )}
-          />
-        </div>
-        <div className="md:hidden mt-8">
-          <SwiperCarousel
-            data={data.places.flat()}
-            slidesPerView={1}
-            spaceBetween={24}
-            loop
-            modules={[Autoplay, Navigation]}
-            navigation
-            autoplay={{
-              delay: 2500,
-              disableOnInteraction: false,
-              pauseOnMouseEnter: true,
-            }}
-            breakpoints={{
-              768: {
-                slidesPerView: 1,
-              },
-            }}
-            renderSlide={(images) => {
-              console.log(images);
-              return (
-                <div className="">
-                  <div className="relative aspect-[2.5/3] ">
-                    <Image
-                      src={images.image}
-                      // alt={`Explore ${index + 1}`}
-                      fill
-                      className="object-cover"
-                    />
-                  </div>
-                  {images.title && (
-                    <div className=" text-secondary py-2 text-lg">{images.title}</div>
-                  )}
-                </div>
-              )
-            }}
-          />
-        </div>
+              {item.title && (
+                <div className=" text-secondary py-2 text-lg">{item.title}</div>
+              )}
+            </div>
+          )}
+        />
       </div>
-    </section>
+    </SectionWithContainer>
   );
 }

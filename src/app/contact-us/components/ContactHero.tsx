@@ -9,7 +9,7 @@ interface Props {
 
 export default function ContactHero({ data }: Props) {
   return (
-    <div className="max-screen_width ">
+    <SectionWithContainer sectionClassName="">
       <div className="max-w-3xl mx-auto text-center ">
         <h1 className="font-primary text-4xl font-semibold">
           {data.title}
@@ -19,6 +19,6 @@ export default function ContactHero({ data }: Props) {
           {data.description}
         </p>
       </div>
-    </div>
+    </SectionWithContainer>
   );
 }
