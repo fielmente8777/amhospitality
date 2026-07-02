@@ -1,9 +1,9 @@
 "use client";
 
+import Form1 from "@/components/forms/Form1";
+import { Section } from "@/components/sectionComponants";
 import Image from "next/image";
 import { HomeBannerProps } from "../pageData";
-import Form1 from "@/components/forms/Form1";
-import SectionWithContainer from "@/components/sectionComponants/SectionWithContainer";
 
 interface Props {
   data: HomeBannerProps;
@@ -11,7 +11,7 @@ interface Props {
 
 export default function HomeBanner({ data }: Props) {
   return (
-    <SectionWithContainer sectionClassName="py-0!">
+    <Section className="py-0!">
       {/* Banner Image */}
       <div className="relative w-full h-[400px] md:h-[600px]">
 
@@ -48,6 +48,6 @@ export default function HomeBanner({ data }: Props) {
       <div className=" md:hidden mt-6">
         <Form1 />
       </div>
-    </SectionWithContainer>
+    </Section>
   );
 }

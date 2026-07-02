@@ -1,4 +1,3 @@
-import CareerForm from "@/components/forms/CareerForm";
 import { SectionWithContainer } from "@/components/sectionComponants";
 import { SectionHeading } from "@/components/typography";
 
@@ -20,7 +19,7 @@ const JoinAlHathaifa: React.FC<JoinUsType> = ({
           <p className="text-light">{description}</p>
         </div>
         <div className="">
-          <CareerForm />
+          {/* <CareerForm /> */}
         </div>
       </div>
     </SectionWithContainer>

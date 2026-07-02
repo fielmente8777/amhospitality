@@ -4,8 +4,13 @@ import Image from "next/image";
 import SwiperCarousel from "@/components/sliders/SwiperCarousel";
 import { SectionHeading } from "@/components/typography";
 import { DiningProps } from "../pageData";
-import { SectionWithContainer } from "@/components/sectionComponants";
+import {
+  Container,
+  Section,
+  SectionWithContainer,
+} from "@/components/sectionComponants";
 import { Autoplay, Navigation } from "swiper/modules";
+import { LeftIcon } from "@/utils/icons";
 
 interface Props {
   data: DiningProps;
@@ -13,11 +18,12 @@ interface Props {
 
 export default function Dining({ data }: Props) {
   return (
-    <SectionWithContainer>
-     
-        <SectionHeading title={data.title} />
-        <p className="text-[20px] text-secondary">{data.subtitle}</p>
-
+    <Section>
+      <div className="relative">
+        <Container>
+          <SectionHeading title={data.title} />
+          <p className="text-[20px] text-secondary">{data.subtitle}</p>
+        </Container>
         <div className="mt-8">
           <SwiperCarousel
             data={data.slides}
@@ -25,7 +31,10 @@ export default function Dining({ data }: Props) {
             spaceBetween={24}
             loop
             modules={[Autoplay, Navigation]}
-            navigation
+            navigation={{
+              prevEl: ".custom-prev",
+              nextEl: ".custom-next",
+            }}
             autoplay={{
               delay: 2500,
               disableOnInteraction: false,
@@ -56,8 +65,19 @@ export default function Dining({ data }: Props) {
               );
             }}
           />
+          <div className=" absolute top-2 right-0 mt-6 flex justify-center items-center gap-2">
+            <button className="custom-prev rounded-full bg-gray-400 h-10 w-10 p-2 flex justify-center items-center text-white">
+              <LeftIcon />
+            </button>
+
+            <p>1/3</p>
+
+            <button className="custom-next rotate-180 rounded-full bg-gray-400 h-10 w-10 p-2 flex justify-center items-center text-white">
+              <LeftIcon />
+            </button>
+          </div>
         </div>
-     
-    </SectionWithContainer>
+      </div>
+    </Section>
   );
 }

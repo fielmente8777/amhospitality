@@ -265,6 +265,30 @@ export const ResortPageData = [
           image: "/images/blue3.jpg",
           alt: "About Image 3",
         },
+        {
+          image: "/images/blue1.jpg",
+          alt: "About Image 1",
+        },
+        {
+          image: "/images/blue2.jpg",
+          alt: "About Image 2",
+        },
+        {
+          image: "/images/blue3.jpg",
+          alt: "About Image 3",
+        },
+        {
+          image: "/images/blue1.jpg",
+          alt: "About Image 1",
+        },
+        {
+          image: "/images/blue2.jpg",
+          alt: "About Image 2",
+        },
+        {
+          image: "/images/blue3.jpg",
+          alt: "About Image 3",
+        },
       ],
     },
 

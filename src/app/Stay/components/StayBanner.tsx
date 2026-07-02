@@ -1,9 +1,7 @@
-
-
+import Form1 from "@/components/forms/Form1";
+import Section from "@/components/sectionComponants/Section";
 import Image from "next/image";
 import { StayBannerProps } from "../pageData";
-import Form1 from "@/components/forms/Form1";
-import SectionWithContainer from "@/components/sectionComponants/SectionWithContainer";
 
 interface Props {
   data: StayBannerProps;
@@ -11,7 +9,8 @@ interface Props {
 
 export default function StayBanner({ data }: Props) {
   return (
-    <SectionWithContainer sectionClassName="py-0!">
+    <Section className="py-0!">
+      
       <div className="relative w-full h-[400px] md:h-[600px]">
         <Image
           src={data.image}
@@ -37,6 +36,6 @@ export default function StayBanner({ data }: Props) {
       <div className=" md:hidden mt-6">
         <Form1 />
       </div>
-    </SectionWithContainer>
+    </Section>
   );
 }
