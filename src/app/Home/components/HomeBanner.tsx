@@ -34,11 +34,11 @@ export default function HomeBanner ({data}: Props) {
           <p className="mt-4 text-center text-[20px] text-white">
             {data.description}
           </p>
-          <div className="hidden md:block mt-6">
+         
+        </div>
+         <div className="hidden md:block mt-6">
           <Form1/>
           </div>
-        </div>
-        
       </div>
 
     </SectionWithContainer>
