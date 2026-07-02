@@ -6,11 +6,11 @@ import Form1 from "@/components/forms/Form1";
 import SectionWithContainer from "@/components/sectionComponants/SectionWithContainer";
 
 interface Props {
-     data: HomeBannerProps;
+  data: HomeBannerProps;
 }
 
-export default function HomeBanner ({data}: Props) {
-     return (
+export default function HomeBanner({ data }: Props) {
+  return (
     <SectionWithContainer sectionClassName="relative h-[400px] md:h-[500px] overflow-hidden">
       {/* Banner Image */}
       <Image
@@ -25,7 +25,7 @@ export default function HomeBanner ({data}: Props) {
       <div className="absolute inset-0 bg-black/40" />
 
       {/* Content */}
-      <div className="absolute inset-0 flex  items-center justify-center">
+      <div className="absolute inset-0 flex flex-col items-center justify-center">
         <div className="max_width flex flex-col items-center">
           <h1 className="text-center text-2xl md:text-5xl font-bold uppercase text-white">
             {data.title}
@@ -34,15 +34,14 @@ export default function HomeBanner ({data}: Props) {
           <p className="mt-4 text-center text-[20px] text-white">
             {data.description}
           </p>
-         
+          <Form1 />
         </div>
-         <div className="hidden md:block mt-6">
-          <Form1/>
-          </div>
+
       </div>
 
+      <div className="md:hidden mt-6">
+        <Form1 />
+      </div>
     </SectionWithContainer>
-
-        
   );
 }
