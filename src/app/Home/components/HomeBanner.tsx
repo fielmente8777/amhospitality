@@ -11,7 +11,7 @@ interface Props {
 
 export default function HomeBanner ({data}: Props) {
      return (
-    <SectionWithContainer sectionClassName="relative h-[400px] md:h-[500px] overflow-hidden">
+    <SectionWithContainer sectionClassName="relative  h-[400px] md:h-[500px] overflow-hidden">
       {/* Banner Image */}
       <Image
         src={data.image}
@@ -25,7 +25,7 @@ export default function HomeBanner ({data}: Props) {
       <div className="absolute inset-0 bg-black/40" />
 
       {/* Content */}
-      <div className="absolute inset-0 flex  items-center justify-center">
+      <div className="md:absolute inset-0 flex items-center justify-center">
         <div className="max_width flex flex-col items-center">
           <h1 className="text-center text-2xl md:text-5xl font-bold uppercase text-white">
             {data.title}
@@ -34,15 +34,15 @@ export default function HomeBanner ({data}: Props) {
           <p className="mt-4 text-center text-[20px] text-white">
             {data.description}
           </p>
-         
-        </div>
-         <div className="hidden md:block mt-6">
+          <div className="hidden md:block mt-6">
           <Form1/>
           </div>
-      </div>
-
-    </SectionWithContainer>
-
+        </div>
         
+      </div>
+      <div className="bg-background2 md:hidden mt-6">
+        <Form1/>
+        </div>
+    </SectionWithContainer>
   );
 }
