@@ -8,7 +8,6 @@ interface Props {
 }
 
 export default function Hospitality({ data }: Props) {
-  console.log(data);
   return (
     <SectionWithContainer sectionClassName="bg-secondary text-white text-center">
       <SectionHeading title={data.title} />

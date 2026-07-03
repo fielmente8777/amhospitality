@@ -110,7 +110,6 @@ export default function AboutUs({ data }: Props) {
             },
           }}
           renderSlide={(images) => {
-            console.log(images);
             return (
               <div className="relative aspect-[2.5/3] overflow-hidden">
                 <Image

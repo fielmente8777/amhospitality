@@ -24,15 +24,13 @@ const MobileNav: React.FC = () => {
     };
   }, [isOpenNavBar]);
 
-  console.log("openDropDown", isOpenNavBar);
   return (
     <div
       className={`fixed top-0 left-0 w-full h-screen z-[9999] bg-black/60 transition-all duration-300
-    ${
-      isOpenNavBar
-        ? "translate-x-0 pointer-events-auto"
-        : "-translate-x-full pointer-events-none"
-    }`}
+    ${isOpenNavBar
+          ? "translate-x-0 pointer-events-auto"
+          : "-translate-x-full pointer-events-none"
+        }`}
     >
       <div className="w-[80%] h-full relative pointer-events-auto">
         <div className="w-full h-full bg-background py-4 ps-4">
