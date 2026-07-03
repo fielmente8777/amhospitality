@@ -84,18 +84,18 @@ export const DiningData = {
         image: "/images/dining1.jpg",
         alt: "Dining Image 3",
       },],
-      [{
-        image: "/images/dining2.jpg",
-        alt: "Dining Image 4",
-      },
-      {
-        image: "/images/dining1.jpg",
-        alt: "Dining Image 5",
-      },
-      {
-        image: "/images/dining2.jpg",
-        alt: "Dining Image 6",
-      },
+    [{
+      image: "/images/dining2.jpg",
+      alt: "Dining Image 4",
+    },
+    {
+      image: "/images/dining1.jpg",
+      alt: "Dining Image 5",
+    },
+    {
+      image: "/images/dining2.jpg",
+      alt: "Dining Image 6",
+    },
     ],
   ],
 };

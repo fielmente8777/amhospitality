@@ -70,11 +70,10 @@ export default function AboutUs({ data }: Props) {
           <div className="absolute top-2 right-0 flex items-center gap-4">
             <button
               className={`custom-prev flex h-10 w-10 items-center justify-center rounded-full transition-all
-      ${
-        activeIndex === 1
-          ? "bg-[#E9E9E9] text-[#A3A3A3]"
-          : "bg-white border border-black text-black"
-      }`}
+      ${activeIndex === 1
+                  ? "bg-[#E9E9E9] text-[#A3A3A3]"
+                  : "bg-white border border-black text-black"
+                }`}
             >
               <LeftIcon />
             </button>
