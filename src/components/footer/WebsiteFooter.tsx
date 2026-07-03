@@ -2,7 +2,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { Container } from "../sectionComponants";
 import { webSiteFooterData } from "./footerdata";
-import AccordionLinks from "./AccordionLinks";
 
 const WebsiteFooter = () => {
   return (

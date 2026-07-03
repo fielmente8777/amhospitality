@@ -155,7 +155,7 @@ export const webSiteFooterData: WebSiteFooterData = {
         },
         {
           label: "Events & Weddings",
-          href: "/events-weddings",
+          href: "#",
         },
         {
           label: "Contact",
@@ -168,15 +168,15 @@ export const webSiteFooterData: WebSiteFooterData = {
       links: [
         {
           label: "Privacy Policy",
-          href: "/privacy-policy",
+          href: "#",
         },
         {
           label: "Cancellation Policy",
-          href: "/cancellation-policy",
+          href: "#",
         },
         {
           label: "Terms & Conditions",
-          href: "/terms-conditions",
+          href: "#",
         },
       ],
     },

@@ -1,4 +1,3 @@
-import Form2 from "@/components/forms/Form2";
 import ContactHero from "./components/ContactHero";
 import ContactInfo from "./components/ContactInfo";
 

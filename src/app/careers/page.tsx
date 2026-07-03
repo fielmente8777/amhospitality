@@ -1,7 +1,6 @@
 import { Metadata } from "next";
-import ContactHero from "./components/ContactHero";
-import { ContactHeroData } from "../contact-us/pageData";
 import { careersPageData } from "./components/careersPageData";
+import ContactHero from "./components/ContactHero";
 import JoinAlHathaifa from "./components/JoinAlHathaifa";
 
 
