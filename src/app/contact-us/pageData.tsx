@@ -7,22 +7,18 @@ export const ContactHeroData = {
 export const ContactInfoData = {
   image: "/images/contact.jpg",
 
-  cards: [
-    {
-      title: "WABI SABI RESORT",
-      phone: "+91 XXXXX XXXXX",
-      email: "info@demo.in",
-    },
-    {
-      title: "AM HOSPITALITY",
-      phone: "+91 XXXXX XXXXX",
-      email: "info@demo.in",
-    },
-    {
-      title: "BLUE LAKE RESORT",
-      phone: "+91 XXXXX XXXXX",
-      email: "info@demo.in",
-    },
-  ],
+  contact: {
+    title: "ANTE MERIDIEM HOSPITALITY PVT. LTD.",
+    address: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+     addressLink: "https://maps.google.com/?q=Your+Address",
+    phones: [
+      "+91 7984717453",
+      "+91 7798622209",
+    ],
+    email: "ceo@amhotels.in",
+  },
+
+
 };
+
 

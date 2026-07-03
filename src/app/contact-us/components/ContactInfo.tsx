@@ -1,18 +1,19 @@
-import {
-  Container,
-  Section,
-  SectionWithContainer,
-} from "@/components/sectionComponants";
+import Form3 from "@/components/forms/Form3";
+import { Container, Section } from "@/components/sectionComponants";
+import { ChatIcon, DIcon, MailIcon, MapIcon, PIcon } from "@/utils/icons";
 import Image from "next/image";
+import Link from "next/link";
 
 interface Props {
   data: {
     image: string;
-    cards: {
+    contact: {
       title: string;
-      phone: string;
+      address: string;
+      addressLink: string;
+      phones: string[];
       email: string;
-    }[];
+    };
   };
 }
 
@@ -20,25 +21,76 @@ export default function ContactInfo({ data }: Props) {
   return (
     <Section>
       <div className="relative w-full aspect-[16/7]">
-        <Image src={data.image} alt="Contact" fill className="object-cover" />
+        <Image
+          src={data.image}
+          alt="Contact"
+          fill
+          className="object-cover"
+        />
       </div>
-      <div className="bg-background2">
+
+      <div className="">
         <Container>
-          <div className="grid md:grid-cols-3 py-12 ">
-            {data.cards.map((item, index) => (
-              <div
-                key={index}
-                className="py-8 text-center md:border-r last:border-r-0 border-primary px-10"
-              >
-                <h3 className="font-semibold text-[32px] text-primary">
-                  {item.title}
-                </h3>
+          <div className="grid items-start gap-20 py-12 lg:grid-cols-[1fr_560px]">
+            {/* Left Side */}
+            <div className="max-w-md">
+              <h3 className="text-[32px] font-semibold text-secondary">
+                {data.contact.title}
+              </h3>
 
-                <p className="mt-4 text-sm">Phone: {item.phone}</p>
+              <div className="mt-8 space-y-5">
+                <div className="flex items-start gap-3">
+                  <MapIcon />
+                  <Link
+                    href={data.contact.addressLink}
+                    target="_blank"
+                    className="text-secondary hover:text-primary transition-colors"
+                  >
+                    {data.contact.address}
+                  </Link>
+                </div>
 
-                <p className="mt-2 text-sm">{item.email}</p>
+                <div className="flex items-center gap-3">
+                  <PIcon />
+                  <Link
+                    href={`tel:${data.contact.phones[0]}`}
+                    className="text-secondary hover:text-primary transition-colors"
+                  >
+                    {data.contact.phones[0]}
+                  </Link>
+                </div>
+
+                <div className="flex items-center gap-3">
+                  <ChatIcon />
+                  <Link
+                    href={`tel:${data.contact.phones[1]}`}
+                    className="text-secondary hover:text-primary transition-colors"
+                  >
+                    {data.contact.phones[1]}
+                  </Link>
+                </div>
+
+                <div className="flex items-center gap-3">
+                  <MailIcon />
+                  <Link
+                    href={`mailto:${data.contact.email}`}
+                    className="text-secondary hover:text-primary transition-colors"
+                  >
+                    {data.contact.email}
+                  </Link>
+                </div>
               </div>
-            ))}
+
+              <button className="mt-8 inline-flex items-center gap-2 rounded-md border border-primary px-5 py-2 text-primary transition hover:bg-primary hover:text-white">
+                <span>Get Direction</span>
+                <DIcon />
+              </button>
+            </div>
+
+            {/* Right Side */}
+            <div className="w-full">
+              <Form3 />
+            </div>
           </div>
         </Container>
       </div>

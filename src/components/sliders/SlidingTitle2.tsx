@@ -12,7 +12,7 @@ export default function SlidingTitle2({
   return (
     <div
       aria-hidden={ariaHidden}
-      className="relative overflow-hidden py-3 bg-white text-secondary border-y border-secondary max_screen_width bg-background2/40"
+      className="relative overflow-hidden py-3 bg-secondary text-white border-y border-secondary max_screen_width bg-background2/40"
     >
       <div className="marquee-wrapper">
         <div className="marquee-track">
@@ -35,16 +35,17 @@ export default function SlidingTitle2({
 }
 
 export const ICon = () => (
-  <svg
-    width={12}
-    height={12}
-    viewBox="0 0 12 12"
-    fill="none"
-    xmlns="http://www.w3.org/2000/svg"
-  >
-    <path
-      d="M5.544 11.077L-4.60818e-06 5.544L5.544 3.57628e-07L11.077 5.544L5.544 11.077ZM5.544 10.076L10.076 5.544L5.544 1.001L1.012 5.544L5.544 10.076ZM5.544 7.843L3.234 5.544L5.544 3.234L7.854 5.544L5.544 7.843Z"
-      fill="#EF6C22"
-    />
-  </svg>
+<svg
+  width={12}
+  height={12}
+  viewBox="0 0 12 12"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <path
+    d="M5.54403 11.0769L2.59094e-05 5.54388L5.54403 -0.000121713L11.077 5.54388L5.54403 11.0769ZM5.54403 10.0759L10.076 5.54388L5.54403 1.00088L1.01203 5.54388L5.54403 10.0759ZM5.54403 7.84288L3.23403 5.54388L5.54403 3.23388L7.85403 5.54388L5.54403 7.84288Z"
+    fill="#80572E"
+  />
+</svg>
+
 );

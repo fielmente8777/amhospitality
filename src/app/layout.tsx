@@ -5,6 +5,7 @@ import "./style.scss";
 
 import NavBar from "@/components/navbar/WebsiteNav";
  import Footer from "@/components/footer/WebsiteFooter";
+import { WebProvider } from "@/context-api/WebContext";
 
 const gilroy = localFont({
   src: [
@@ -56,9 +57,11 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${gilroy.variable} h-full antialiased`}>
       <body className="" suppressHydrationWarning={true}>
+        <WebProvider>
         <NavBar />
         {children}
         <Footer />
+        </WebProvider>
       </body>
     </html>
   );

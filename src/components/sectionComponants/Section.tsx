@@ -1,5 +1,5 @@
 interface SectionProps {
-  className?: string;
+  sectionClassName?: string;
   children: React.ReactNode;
   id?: string;
   style?: React.CSSProperties;
@@ -7,7 +7,7 @@ interface SectionProps {
 }
 
 const Section: React.FC<SectionProps> = ({
-  className = "",
+  sectionClassName: className = "",
   id,
   children,
   defaultPadding = true,

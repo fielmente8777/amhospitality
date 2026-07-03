@@ -31,7 +31,7 @@ const SectionWithContainer: React.FC<SectionWithContainerProps> = ({
   return (
     <Section
       id={sectionId}
-      className={sectionClassName}
+      sectionClassName={sectionClassName}
       style={sectionStyle}
       defaultPadding={defaultPadding}
       {...sectionProps}

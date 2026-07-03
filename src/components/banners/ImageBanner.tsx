@@ -20,7 +20,7 @@ const ImageBanner: React.FC<ImageBannerProps> = ({
   return (
     <Section
       defaultPadding={false}
-      className="relative w-full lg:aspect-[16/7.7] aspect-4/9.5"
+      sectionClassName="relative w-full lg:aspect-[16/7.7] aspect-4/9.5"
     >
       <div className="inset-x-0 absolute z-30 ">
         <LandingNavbar />

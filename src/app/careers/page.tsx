@@ -1,6 +1,6 @@
 import { Metadata } from "next";
-import StayBanner from "../stay/components/StayBanner";
-import { StayBannerData } from "../stay/pageData";
+import ContactHero from "./components/ContactHero";
+import { ContactHeroData } from "../contact-us/pageData";
 import { careersPageData } from "./components/careersPageData";
 import JoinAlHathaifa from "./components/JoinAlHathaifa";
 
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
 export default function CareersPage() {
     return (
         <main>
-            <StayBanner data= {StayBannerData} />
+            <ContactHero data={careersPageData.bannerData} />
             <JoinAlHathaifa {...careersPageData.JoinUsData} />
         </main>
     );

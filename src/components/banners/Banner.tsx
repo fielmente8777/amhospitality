@@ -20,7 +20,7 @@ const Banner: React.FC<ImageBannerProps> = ({
   return (
     <Section
       defaultPadding={false}
-      className="relative w-full lg:aspect-[16/7.7] aspect-4/5.5"
+      sectionClassName="relative w-full lg:aspect-[16/7.7] aspect-4/5.5"
     >
       <Image
         src={images[0]}

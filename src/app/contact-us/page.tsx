@@ -9,7 +9,7 @@ export default function ContactPage() {
     <main>
       <ContactHero data={ContactHeroData} />
       <ContactInfo data={ContactInfoData} />
-      <Form2 />
+      
     </main>
   );
 }

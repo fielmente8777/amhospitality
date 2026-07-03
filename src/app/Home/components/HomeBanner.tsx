@@ -11,7 +11,7 @@ interface Props {
 
 export default function HomeBanner({ data }: Props) {
   return (
-    <Section className="py-0!">
+    <Section sectionClassName="py-0!">
       {/* Banner Image */}
       <div className="relative w-full h-[400px] md:h-[600px]">
 

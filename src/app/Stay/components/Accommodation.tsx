@@ -8,13 +8,15 @@ import { AccommodationProps } from "../pageData";
 import { Autoplay, Navigation } from "swiper/modules";
 import SectionWithContainer from "@/components/sectionComponants/SectionWithContainer";
 import { LeftIcon } from "@/utils/icons";
+import { useState } from "react";
 
 interface Props {
   data: AccommodationProps;
 }
 
 export default function Accommodation({ data }: Props) {
-  console.log(data);
+  const [activeIndex, setActiveIndex] = useState(1);
+
   return (
     <SectionWithContainer sectionClassName="">
       <div className="relative">
@@ -42,6 +44,9 @@ export default function Accommodation({ data }: Props) {
                 slidesPerView: 1,
               },
             }}
+            onSlideChange={(swiper) => {
+              setActiveIndex(swiper.realIndex + 1);
+            }}
             swiperSlideClassName=""
             renderSlide={(card) => (
               <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-2">
@@ -51,7 +56,7 @@ export default function Accommodation({ data }: Props) {
                     <div className="relative aspect-[3/3] lg:aspect-[3/2]">
                       <Image
                         src={item.image}
-                        alt={item.title}
+                        alt={`About ${index + 1}`}
                         fill
                         className="object-cover"
                       />
@@ -87,15 +92,26 @@ export default function Accommodation({ data }: Props) {
               </div>
             )}
           />
-          <div className=" absolute top-2 right-0 mt-6 flex justify-center items-center gap-2">
-            <button className="custom-prev rounded-full bg-gray-400 h-10 w-10 p-2 flex justify-center items-center text-white">
+          <div className="absolute top-2 right-0 z-50 flex items-center gap-4">
+            <button
+              className={`custom-prev flex h-10 w-10 items-center justify-center rounded-full transition-all
+      ${
+        activeIndex === 1
+          ? "bg-[#E9E9E9] text-[#A3A3A3]"
+          : "bg-white border border-black text-black"
+      }`}
+            >
               <LeftIcon />
             </button>
 
-            <p>1/3</p>
+            <span className="text-[20px] font-medium">
+              {activeIndex}/{data.cards.length}
+            </span>
 
-            <button className="custom-next rotate-180 rounded-full bg-gray-400 h-10 w-10 p-2 flex justify-center items-center text-white">
-              <LeftIcon />
+            <button className="custom-next flex h-10 w-10 items-center justify-center rounded-full border border-black bg-white text-black">
+              <span className="rotate-180">
+                <LeftIcon />
+              </span>
             </button>
           </div>
         </div>

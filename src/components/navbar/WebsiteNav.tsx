@@ -12,6 +12,8 @@ import { WebsiteNavData } from "./navData";
 const WebsiteNav = () => {
   const pathName = usePathname();
   const { setIsOpenNavBar, isOpenNavBar } = useWebContext();
+
+  console.log(isOpenNavBar);
   return (
     <header className={`max_screen_width  background-color-1`}>
       <nav className="flex items-center justify-between py-4 max_width">
@@ -69,9 +71,14 @@ const WebsiteNav = () => {
           <span>{/* <BookingCalenderIcon /> */}</span>
           Book A Stay
         </Link>
-        <button className="lg: border" onClick={() => setIsOpenNavBar(true)}>
+        <button
+          className="xl:hidden border"
+          onClick={() => {
+            console.log("clicked");
+            setIsOpenNavBar(true);
+          }}
+        >
           <IoMdMenu className="text-3xl" />
-          <span className="sr-only">menu</span>
         </button>
       </nav>
       <MobileNav />

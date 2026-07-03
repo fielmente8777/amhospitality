@@ -189,3 +189,12 @@ export const HospitalityData = {
     },
   ],
 };
+
+export const values = [
+  "Core Values",
+  "Guest First",
+  "Ownership Mindset",
+  "Transparency",
+  "Innovation",
+  "Operational Excellence",
+];

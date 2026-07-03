@@ -43,7 +43,7 @@ export const WebsiteNavData: websiteNavLink = {
       ],
     },
     { label: "Meetings", href: "/meetings" },
-    { label: "Weddings", href: "/weddings" },
+    { label: "Careers", href: "/careers" },
     { label: "Contact", href: "/contact-us" },
   ],
   buttons: [{ label: "BOOK NOW", href: contact.WhatsappCta }],

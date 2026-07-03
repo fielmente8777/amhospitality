@@ -9,7 +9,7 @@ interface Props {
 
 export default function StayBanner({ data }: Props) {
   return (
-    <Section className="py-0!">
+    <Section sectionClassName="py-0!">
       
       <div className="relative w-full h-[400px] md:h-[600px]">
         <Image
