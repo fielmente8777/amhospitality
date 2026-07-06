@@ -4,7 +4,7 @@ import "./globals.css";
 import "./style.scss";
 
 import NavBar from "@/components/navbar/WebsiteNav";
- import Footer from "@/components/footer/WebsiteFooter";
+import Footer from "@/components/footer/WebsiteFooter";
 import { WebProvider } from "@/context-api/WebContext";
 
 const gilroy = localFont({
@@ -56,11 +56,31 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${gilroy.variable} h-full antialiased`}>
+      <head>
+        <link
+          rel="apple-touch-icon"
+          sizes="180x180"
+          href="/favicon/apple-touch-icon.png"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="32x32"
+          href="/favicon/favicon-32x32.png"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="16x16"
+          href="/favicon/favicon-16x16.png"
+        />
+        <link rel="manifest" href="/favicon/site.webmanifest"></link>
+      </head>
       <body className="" suppressHydrationWarning={true}>
         <WebProvider>
-        <NavBar />
-        {children}
-        <Footer />
+          <NavBar />
+          {children}
+          <Footer />
         </WebProvider>
       </body>
     </html>

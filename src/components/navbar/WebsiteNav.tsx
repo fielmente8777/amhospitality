@@ -1,13 +1,14 @@
 "use client";
 import { useWebContext } from "@/context-api/WebContext";
 import { contact } from "@/utils/constent";
-import { BookingCalenderIcon, FillDropDownIcon } from "@/utils/icons";
+import { FillDropDownIcon } from "@/utils/icons";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { IoMdMenu } from "react-icons/io";
 import MobileNav from "./MobileNav";
 import { WebsiteNavData } from "./navData";
+import { MdClose } from "react-icons/md";
 
 const WebsiteNav = () => {
   const pathName = usePathname();
@@ -71,12 +72,12 @@ const WebsiteNav = () => {
           Book A Stay
         </Link>
         <button
-          className="xl:hidden border"
+          className={`xl:hidden z-99999 duration-300 transition-all ease-in-out ${isOpenNavBar ? "rotate-90" : ""}`}
           onClick={() => {
-            setIsOpenNavBar(true);
+            setIsOpenNavBar(!isOpenNavBar);
           }}
         >
-          <IoMdMenu className="text-3xl" />
+          {isOpenNavBar ? <MdClose className="text-3xl" /> : <IoMdMenu className="text-3xl" />}
         </button>
       </nav>
       <MobileNav />
