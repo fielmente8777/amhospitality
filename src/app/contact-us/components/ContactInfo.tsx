@@ -19,8 +19,8 @@ interface Props {
 
 export default function ContactInfo({ data }: Props) {
   return (
-    <Section>
-      <div className="relative w-full aspect-[16/7]">
+    <Section defaultPadding={false} sectionClassName="pb-10">
+      <div className="relative w-full aspect-[4/3] md:aspect-[16/7]">
         <Image
           src={data.image}
           alt="Contact"
@@ -31,9 +31,9 @@ export default function ContactInfo({ data }: Props) {
 
       <div className="">
         <Container>
-          <div className="grid items-start gap-20 py-12 lg:grid-cols-[1fr_560px]">
+          <div className="grid items-start gap-20 py-12 lg:grid-cols-[1fr_560px] grid-cols-1">
             {/* Left Side */}
-            <div className="max-w-md">
+            <div className="w-full lg:max-w-md">
               <h3 className="text-[32px] font-semibold text-secondary">
                 {data.contact.title}
               </h3>

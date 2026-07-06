@@ -8,7 +8,7 @@ export interface AboutUsProps {
   title: string;
   subtitle: string;
   description: string;
-  images: string[][];
+  images: string[];
 }
 
 export interface DiningProps {
@@ -17,7 +17,7 @@ export interface DiningProps {
   slides: {
     image: string;
     alt: string;
-  }[][];
+  }[];
 }
 
 export interface ExploreMoreProps {
@@ -49,9 +49,10 @@ export interface HospitalityProps {
 export const HomeBannerData = {
   image: "/images/homebg.jpg",
 
-  title: "WELCOME TO AM HOTELS & RESORTS",
+  title: "WE LEASE, OPERATE & GROW HOSPITALITY ASSETS",
 
-  description: "Designed to make your vacation truly special.",
+  description:
+    "Ante Meridiem Hospitality Pvt. Ltd. transforms resorts, hotels, villas and hospitality assets into profitable destinations through operational excellence, revenue management and guest-centric experiences.",
 };
 
 export const AboutUsData = {
@@ -59,32 +60,37 @@ export const AboutUsData = {
   subtitle: "Beyond Stays, We Create Memories.",
 
   images: [
-    ["/images/about1.jpg", "/images/about2.jpg", "/images/about3.jpg"],
-    ["/images/about1.jpg", "/images/about2.jpg", "/images/about3.jpg"],
-    ["/images/about1.jpg", "/images/about2.jpg", "/images/about3.jpg"],
+    "/images/about1.jpg",
+    "/images/about2.jpg",
+    "/images/about3.jpg",
+    "/images/about1.jpg",
+    "/images/about2.jpg",
+    "/images/about3.jpg",
+    "/images/about1.jpg",
+    "/images/about2.jpg",
+    "/images/about3.jpg",
   ],
   description:
-    'AM Hotels & Resorts is a curated collection of extraordinary hospitality experiences designed for discerning travelers who seek serenity, beauty, and exceptional service. Rooted in a passion for authentic stays and memorable escapes, our portfolio places you in hand-picked destinations that celebrate nature, comfort, and local charm. From the tranquil lakeside ambience of <strong class="font-semibold" >The Blue Lake Resort</strong> in Igatpuri to the thoughtfully crafted retreat at <b class="font-semibold">Wabi Sabi Resorts</b>, every property reflects our commitment to genuine warmth, thoughtful design, and seamless guest experiences. At AM Hotels & Resorts, we believe travel should rejuvenate the spirit and create lasting memories — because your journey deserves nothing less than remarkable.',
+    'Ante Meridiem Hospitality Pvt. Ltd. was established with a vision to redefine hospitality management by combining operational expertise, strategic marketing and exceptional guest experiences.From independent resorts to large hospitality assets, we specialize in turning underperforming properties into thriving destinations.<strong class="font-semibold" >Our Mission</strong> - To create memorable guest experiences while maximizing long-term value for hospitality asset owners.<strong class="font-semibold" >Our Vision</strong> - To become India’s most trusted hospitality management and leasing company.',
 };
 
 export const DiningData = {
   title: "DINING",
   subtitle: "An Experience in Every Bite.",
   slides: [
-    [
-      {
-        image: "/images/dining1.jpg",
-        alt: "Dining Image 1",
-      },
-      {
-        image: "/images/dining2.jpg",
-        alt: "Dining Image 2",
-      },
-      {
-        image: "/images/dining1.jpg",
-        alt: "Dining Image 3",
-      },],
-    [{
+    {
+      image: "/images/dining1.jpg",
+      alt: "Dining Image 1",
+    },
+    {
+      image: "/images/dining2.jpg",
+      alt: "Dining Image 2",
+    },
+    {
+      image: "/images/dining1.jpg",
+      alt: "Dining Image 3",
+    },
+    {
       image: "/images/dining2.jpg",
       alt: "Dining Image 4",
     },
@@ -96,7 +102,6 @@ export const DiningData = {
       image: "/images/dining2.jpg",
       alt: "Dining Image 6",
     },
-    ],
   ],
 };
 
@@ -146,6 +151,24 @@ export const TestimonialsData = {
   subtitle: "AM Hospitality Experiences Shared by Our Guests.",
 
   testimonials: [
+    {
+      rating: 5,
+      review:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      name: "Lorem Ipsum",
+    },
+    {
+      rating: 5,
+      review:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.",
+      name: "Lorem Ipsum",
+    },
+    {
+      rating: 5,
+      review:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
+      name: "Lorem Ipsum",
+    },
     {
       rating: 5,
       review:

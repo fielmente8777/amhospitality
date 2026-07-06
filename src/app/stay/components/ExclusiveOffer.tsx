@@ -41,6 +41,14 @@ export default function ExclusiveOffer({ data }: Props) {
           {/* Content */}
           <div className="bg-white  aspect-4/3 lg:aspect-3/2 px-6 md:px-12 py-5 md:py-10 ">
             <SectionHeading title={data.title} />
+            <div className="relative mt-5 aspect-[4/3] lg:hidden">
+              <Image
+                src={data.image}
+                alt={data.title}
+                fill
+                className="object-cover"
+              />
+            </div>
 
             <p className="mt-6  text-secondary">{data.description}</p>
 

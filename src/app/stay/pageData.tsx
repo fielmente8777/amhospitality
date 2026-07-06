@@ -1,5 +1,6 @@
 import { BIcon, TeaIcon, TVIcon } from "@/utils/icons";
 import { JSX } from "react";
+import { contact } from "@/utils/constent";
 
 export interface StayBannerProps {
   image: string;
@@ -51,7 +52,7 @@ export interface AccommodationProps {
     popupButton: {
       text: string;
     };
-  }[][];
+  }[];
 }
 
 export interface OfferProps {
@@ -85,7 +86,7 @@ export const ResortCardsData: ResortCard[] = [
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit.",
     bookButton: "Book Now",
     moreButton: "More",
-    bookhref: "/",
+    bookhref: "/contact-us",
     morehref: "/stay/blue-lake",
   },
   {
@@ -95,7 +96,7 @@ export const ResortCardsData: ResortCard[] = [
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit.",
     bookButton: "Book Now",
     moreButton: "More",
-    bookhref: "/",
+    bookhref: "/contact-us",
     morehref: "/stay/wabi-sabi",
   },
 ];
@@ -128,6 +129,30 @@ export const ResortPageData = [
           image: "/images/dining1.jpg",
           alt: "About Image 3",
         },
+        {
+          image: "/images/dining1.jpg",
+          alt: "About Image 1",
+        },
+        {
+          image: "/images/dining2.jpg",
+          alt: "About Image 2",
+        },
+        {
+          image: "/images/dining1.jpg",
+          alt: "About Image 3",
+        },
+        {
+          image: "/images/dining1.jpg",
+          alt: "About Image 1",
+        },
+        {
+          image: "/images/dining2.jpg",
+          alt: "About Image 2",
+        },
+        {
+          image: "/images/dining1.jpg",
+          alt: "About Image 3",
+        },
       ],
     },
 
@@ -136,85 +161,160 @@ export const ResortPageData = [
       subtitle: "Beyond Stays, We Create Memories.",
 
       cards: [
-        [
-          {
-            image: "/images/king.jpg",
+        {
+          image: "/images/king.jpg",
 
-            popupImages: [
-              {
-                image: "/images/king1.jpg",
-                alt: "King Room",
-              },
-              {
-                image: "/images/king2.jpg",
-                alt: "King Room",
-              },
-            ],
-
-            title: "KING ROOM",
-
-            amenities: [
-              {
-                icon: <BIcon />,
-                title: "King Size Bed",
-              },
-              {
-                icon: <TVIcon />,
-                title: "Television",
-              },
-              {
-                icon: <TeaIcon />,
-                title: "Tea Kettle",
-              },
-            ],
-
-            description:
-              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.",
-
-            popupButton: {
-              text: "MORE",
+          popupImages: [
+            {
+              image: "/images/king1.jpg",
+              alt: "King Room",
             },
-          },
-
-          {
-            image: "/images/swiss.jpg",
-
-            popupImages: [
-              {
-                image: "/images/king1.jpg",
-                alt: "King Room",
-              },
-              {
-                image: "/images/king2.jpg",
-                alt: "King Room",
-              },
-            ],
-
-            title: "SWISS AC TENTS",
-
-            amenities: [
-              {
-                icon: <BIcon />,
-                title: "King Size Bed",
-              },
-              {
-                icon: <TVIcon />,
-                title: "Television",
-              },
-              {
-                icon: <TeaIcon />,
-                title: "Tea Kettle",
-              },
-            ],
-
-            description:
-              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.",
-
-            popupButton: {
-              text: "MORE",
+            {
+              image: "/images/king2.jpg",
+              alt: "King Room",
             },
+          ],
+
+          title: "KING ROOM",
+
+          amenities: [
+            {
+              icon: <BIcon />,
+              title: "King Size Bed",
+            },
+            {
+              icon: <TVIcon />,
+              title: "Television",
+            },
+            {
+              icon: <TeaIcon />,
+              title: "Tea Kettle",
+            },
+          ],
+
+          description:
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.",
+
+          popupButton: {
+            text: "MORE",
           },
-        ],
+        },
+
+        {
+          image: "/images/swiss.jpg",
+
+          popupImages: [
+            {
+              image: "/images/king1.jpg",
+              alt: "King Room",
+            },
+            {
+              image: "/images/king2.jpg",
+              alt: "King Room",
+            },
+          ],
+
+          title: "SWISS AC TENTS",
+
+          amenities: [
+            {
+              icon: <BIcon />,
+              title: "King Size Bed",
+            },
+            {
+              icon: <TVIcon />,
+              title: "Television",
+            },
+            {
+              icon: <TeaIcon />,
+              title: "Tea Kettle",
+            },
+          ],
+
+          description:
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.",
+
+          popupButton: {
+            text: "MORE",
+          },
+        },
+        {
+          image: "/images/king.jpg",
+
+          popupImages: [
+            {
+              image: "/images/king1.jpg",
+              alt: "King Room",
+            },
+            {
+              image: "/images/king2.jpg",
+              alt: "King Room",
+            },
+          ],
+
+          title: "KING ROOM",
+
+          amenities: [
+            {
+              icon: <BIcon />,
+              title: "King Size Bed",
+            },
+            {
+              icon: <TVIcon />,
+              title: "Television",
+            },
+            {
+              icon: <TeaIcon />,
+              title: "Tea Kettle",
+            },
+          ],
+
+          description:
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.",
+
+          popupButton: {
+            text: "MORE",
+          },
+        },
+
+        {
+          image: "/images/swiss.jpg",
+
+          popupImages: [
+            {
+              image: "/images/king1.jpg",
+              alt: "King Room",
+            },
+            {
+              image: "/images/king2.jpg",
+              alt: "King Room",
+            },
+          ],
+
+          title: "SWISS AC TENTS",
+
+          amenities: [
+            {
+              icon: <BIcon />,
+              title: "King Size Bed",
+            },
+            {
+              icon: <TVIcon />,
+              title: "Television",
+            },
+            {
+              icon: <TeaIcon />,
+              title: "Tea Kettle",
+            },
+          ],
+
+          description:
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.",
+
+          popupButton: {
+            text: "MORE",
+          },
+        },
       ],
     },
 
@@ -228,12 +328,12 @@ export const ResortPageData = [
 
       bookNowButton: {
         text: "Book Now",
-        href: "/booking",
+        href: contact.WhatsappCta,
       },
 
       contactButton: {
         text: "Contact",
-        href: "/ContactUs",
+        href: "/contact-us",
       },
     },
   },
@@ -289,6 +389,10 @@ export const ResortPageData = [
           image: "/images/blue3.jpg",
           alt: "About Image 3",
         },
+        {
+          image: "/images/blue1.jpg",
+          alt: "About Image 1",
+        },
       ],
     },
 
@@ -297,84 +401,158 @@ export const ResortPageData = [
       subtitle: "Beyond Stays, We Create Memories.",
 
       cards: [
-        [
-          {
-            image: "/images/king.jpg",
-            popupImages: [
-              {
-                image: "/images/king1.jpg",
-                alt: "King Room",
-              },
-              {
-                image: "/images/king2.jpg",
-                alt: "King Room",
-              },
-            ],
-
-            title: "LOREM IPSUM",
-
-            amenities: [
-              {
-                icon: <BIcon />,
-                title: "King Size Bed",
-              },
-              {
-                icon: <TVIcon />,
-                title: "Television",
-              },
-              {
-                icon: <TeaIcon />,
-                title: "Tea Kettle",
-              },
-            ],
-
-            description:
-              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.",
-
-            popupButton: {
-              text: "MORE",
+        {
+          image: "/images/king.jpg",
+          popupImages: [
+            {
+              image: "/images/king1.jpg",
+              alt: "King Room",
             },
-          },
-
-          {
-            image: "/images/swiss.jpg",
-
-            popupImages: [
-              {
-                image: "/images/king1.jpg",
-                alt: "King Room",
-              },
-              {
-                image: "/images/king2.jpg",
-                alt: "King Room",
-              },
-            ],
-
-            title: "LOREM IPSUM",
-
-            amenities: [
-              {
-                icon: <BIcon />,
-                title: "King Size Bed",
-              },
-              {
-                icon: <TVIcon />,
-                title: "Television",
-              },
-              {
-                icon: <TeaIcon />,
-                title: "Tea Kettle",
-              },
-            ],
-
-            description:
-              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.",
-
-            popupButton: {
-              text: "MORE",
+            {
+              image: "/images/king2.jpg",
+              alt: "King Room",
             },
+          ],
+
+          title: "LOREM IPSUM",
+
+          amenities: [
+            {
+              icon: <BIcon />,
+              title: "King Size Bed",
+            },
+            {
+              icon: <TVIcon />,
+              title: "Television",
+            },
+            {
+              icon: <TeaIcon />,
+              title: "Tea Kettle",
+            },
+          ],
+
+          description:
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.",
+
+          popupButton: {
+            text: "MORE",
           },
-        ],
+        },
+
+        {
+          image: "/images/swiss.jpg",
+
+          popupImages: [
+            {
+              image: "/images/king1.jpg",
+              alt: "King Room",
+            },
+            {
+              image: "/images/king2.jpg",
+              alt: "King Room",
+            },
+          ],
+
+          title: "LOREM IPSUM",
+
+          amenities: [
+            {
+              icon: <BIcon />,
+              title: "King Size Bed",
+            },
+            {
+              icon: <TVIcon />,
+              title: "Television",
+            },
+            {
+              icon: <TeaIcon />,
+              title: "Tea Kettle",
+            },
+          ],
+
+          description:
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.",
+
+          popupButton: {
+            text: "MORE",
+          },
+        },
+        {
+          image: "/images/king.jpg",
+          popupImages: [
+            {
+              image: "/images/king1.jpg",
+              alt: "King Room",
+            },
+            {
+              image: "/images/king2.jpg",
+              alt: "King Room",
+            },
+          ],
+
+          title: "LOREM IPSUM",
+
+          amenities: [
+            {
+              icon: <BIcon />,
+              title: "King Size Bed",
+            },
+            {
+              icon: <TVIcon />,
+              title: "Television",
+            },
+            {
+              icon: <TeaIcon />,
+              title: "Tea Kettle",
+            },
+          ],
+
+          description:
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.",
+
+          popupButton: {
+            text: "MORE",
+          },
+        },
+
+        {
+          image: "/images/swiss.jpg",
+
+          popupImages: [
+            {
+              image: "/images/king1.jpg",
+              alt: "King Room",
+            },
+            {
+              image: "/images/king2.jpg",
+              alt: "King Room",
+            },
+          ],
+
+          title: "LOREM IPSUM",
+
+          amenities: [
+            {
+              icon: <BIcon />,
+              title: "King Size Bed",
+            },
+            {
+              icon: <TVIcon />,
+              title: "Television",
+            },
+            {
+              icon: <TeaIcon />,
+              title: "Tea Kettle",
+            },
+          ],
+
+          description:
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.",
+
+          popupButton: {
+            text: "MORE",
+          },
+        },
       ],
     },
 
@@ -388,12 +566,12 @@ export const ResortPageData = [
 
       bookNowButton: {
         text: "Book Now",
-        href: "/booking",
+        href: contact.WhatsappCta,
       },
 
       contactButton: {
         text: "Contact",
-        href: "/contact",
+        href: "/contact-us",
       },
     },
   },

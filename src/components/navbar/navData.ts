@@ -42,7 +42,7 @@ export const WebsiteNavData: websiteNavLink = {
         },
       ],
     },
-    { label: "Meetings", href: "#" },
+    // { label: "Meetings", href: "#" },
     { label: "Careers", href: "/careers" },
     { label: "Contact", href: "/contact-us" },
   ],

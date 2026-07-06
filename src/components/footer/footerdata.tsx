@@ -153,10 +153,10 @@ export const webSiteFooterData: WebSiteFooterData = {
           label: "Stays",
           href: "/stay",
         },
-        {
-          label: "Events & Weddings",
-          href: "#",
-        },
+        // {
+        //   label: "Events & Weddings",
+        //   href: "#",
+        // },
         {
           label: "Contact",
           href: "/contact-us",

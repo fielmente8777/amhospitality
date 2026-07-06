@@ -19,7 +19,7 @@ export default function ResortCards({ data }: Props) {
             key={index}
             className="overflow-hidden bg-white py-8"
           >
-            <div className="relative aspect-[3/3] md:aspect-[3/2]">
+            <div className="relative aspect-[4/2.5] md:aspect-[3/2]">
               <Image
                 src={item.image}
                 alt={item.title}
@@ -28,7 +28,7 @@ export default function ResortCards({ data }: Props) {
               />
             </div>
 
-            <div className="relative z-10 mx-5 -mt-12 bg-white p-6 box-shadow">
+            <div className="relative z-10 bg-white p-4 md:mx-5 md:-mt-12 md:p-6 box-shadow">
               <h2 className="text-2xl font-bold uppercase">{item.title}</h2>
 
               <p className="mt-4 text-sm leading-7 text-gray-600">

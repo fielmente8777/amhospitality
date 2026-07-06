@@ -6,12 +6,13 @@ import { LeftIcon, StarIcon, StarIconOrange } from "@/utils/icons";
 import { TestimonialProps } from "../pageData";
 import SectionWithContainer from "@/components/sectionComponants/SectionWithContainer";
 import { useState } from "react";
+import { Autoplay, Navigation } from "swiper/modules";
 interface Props {
   data: TestimonialProps;
 }
 
 export default function Testimonials({ data }: Props) {
-   const [activeIndex, setActiveIndex] = useState(1);
+  const [activeIndex, setActiveIndex] = useState(1);
   return (
     <SectionWithContainer sectionClassName="">
       <div className="relative">
@@ -23,9 +24,10 @@ export default function Testimonials({ data }: Props) {
             data={data.testimonials}
             slidesPerView={1}
             spaceBetween={32}
+            modules={[Autoplay, Navigation]}
             navigation={{
-              prevEl: ".custom-prev",
-              nextEl: ".custom-next",
+              prevEl: ".testimonial-prev",
+              nextEl: ".testimonial-next",
             }}
             swiperSlideClassName="py-10"
             breakpoints={{
@@ -33,7 +35,7 @@ export default function Testimonials({ data }: Props) {
                 slidesPerView: 3,
               },
             }}
-             onSlideChange={(swiper) => {
+            onSlideChange={(swiper) => {
               setActiveIndex(swiper.realIndex + 1);
             }}
             renderSlide={(item) => (
@@ -52,9 +54,9 @@ export default function Testimonials({ data }: Props) {
               </div>
             )}
           />
-            <div className="absolute top-2 right-0 flex items-center gap-4">
+          <div className="hidden absolute top-2 right-0 md:flex items-center gap-4">
             <button
-              className={`custom-prev flex h-10 w-10 items-center justify-center rounded-full transition-all
+              className={`testimonial-prev flex h-10 w-10 items-center justify-center rounded-full transition-all
       ${
         activeIndex === 1
           ? "bg-[#E9E9E9] text-[#A3A3A3]"
@@ -68,7 +70,7 @@ export default function Testimonials({ data }: Props) {
               {activeIndex}/{data.testimonials.length}
             </span>
 
-            <button className="custom-next flex h-10 w-10 items-center justify-center rounded-full border border-black bg-white text-black">
+            <button className="testimonial-next flex h-10 w-10 items-center justify-center rounded-full border border-black bg-white text-black">
               <span className="rotate-180">
                 <LeftIcon />
               </span>

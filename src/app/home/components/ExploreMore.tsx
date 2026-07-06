@@ -34,8 +34,8 @@ export default function ExploreMore({
             loop
             modules={[Autoplay, Navigation]}
             navigation={{
-              prevEl: ".custom-prev",
-              nextEl: ".custom-next",
+              prevEl: ".explore-prev",
+              nextEl: ".explore-next",
             }}
             autoplay={{
               delay: 2500,
@@ -68,9 +68,9 @@ export default function ExploreMore({
               </div>
             )}
           />
-          <div className="absolute top-2 right-0 flex items-center gap-4">
+          <div className="hidden absolute top-2 right-0 md:flex items-center gap-4">
             <button
-              className={`custom-prev flex h-10 w-10 items-center justify-center rounded-full transition-all
+              className={`explore-prev flex h-10 w-10 items-center justify-center rounded-full transition-all
       ${activeIndex === 1
                   ? "bg-[#E9E9E9] text-[#A3A3A3]"
                   : "bg-white border border-black text-black"
@@ -83,7 +83,7 @@ export default function ExploreMore({
               {activeIndex}/{places.length}
             </span>
 
-            <button className="custom-next flex h-10 w-10 items-center justify-center rounded-full border border-black bg-white text-black">
+            <button className="explore-next flex h-10 w-10 items-center justify-center rounded-full border border-black bg-white text-black">
               <span className="rotate-180">
                 <LeftIcon />
               </span>

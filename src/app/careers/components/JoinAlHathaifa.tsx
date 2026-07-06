@@ -1,5 +1,5 @@
 import CareerForm from "@/components/forms/CareerForm";
-import { Section } from "@/components/sectionComponants";
+import { Container, Section } from "@/components/sectionComponants";
 import { SectionHeading } from "@/components/typography";
 import Image from "next/image";
 
@@ -14,19 +14,21 @@ const JoinAlHathaifa: React.FC<JoinUsType> = ({
   image,
 }) => {
   return (
-    <Section >
-      <div className="relative w-full aspect-[16/7]">
+    <Section defaultPadding={false} sectionClassName="pb-10">
+      <div className="relative w-full aspect-[3/3] md:aspect-[16/7]">
         <Image src={image} alt="Careers" fill className="object-cover" />
       </div>
-      <div className="grid md:grid-cols-2 gap-4 py-16 px-10">
-        <div className="space-y-4">
-          <SectionHeading title={title} />
-          <p className="text-light">{description}</p>
+      <Container>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 py-16 ">
+          <div className="space-y-4">
+            <SectionHeading title={title} />
+            <p className="text-light text-[20px]">{description}</p>
+          </div>
+          <div className="">
+            <CareerForm />
+          </div>
         </div>
-        <div className="">
-          <CareerForm />
-        </div>
-      </div>
+      </Container>
     </Section>
   );
 };

@@ -93,7 +93,7 @@ const CareerForm = () => {
   return (
     <form
       onSubmit={handleSubmit}
-      className="grid md:grid-cols-2 gap-x-6 md:gap-y-8 gap-y-4"
+      className="grid grid-cols-1 md:grid-cols-2 gap-x-6 md:gap-y-8 gap-y-4"
     >
       {formsFields.map((field) => (
         <div key={field.name} className="relative">

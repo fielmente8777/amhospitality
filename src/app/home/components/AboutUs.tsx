@@ -21,7 +21,7 @@ export default function AboutUs({ data }: Props) {
     <SectionWithContainer sectionClassName="">
       <div className="relative">
         <SectionHeading title={data.title} />
-        <p className="text-[20px] text-secondary">{data.subtitle}</p>
+        <p className="text-[18px] md:text-[20px] text-secondary">{data.subtitle}</p>
         <div className="hidden md:block mt-8">
           <SwiperCarousel
             data={data.images}
@@ -30,8 +30,8 @@ export default function AboutUs({ data }: Props) {
             loop
             modules={[Autoplay, Navigation]}
             navigation={{
-              prevEl: ".custom-prev",
-              nextEl: ".custom-next",
+              prevEl: ".about-prev",
+              nextEl: ".about-next",
             }}
             autoplay={{
               delay: 2500,
@@ -40,28 +40,21 @@ export default function AboutUs({ data }: Props) {
             }}
             breakpoints={{
               768: {
-                slidesPerView: 1,
+                slidesPerView: 3,
               },
             }}
             onSlideChange={(swiper) => {
               setActiveIndex(swiper.realIndex + 1);
             }}
-            renderSlide={(images) => {
+            renderSlide={(image) => {
               return (
-                <div className="grid grid-cols-3 gap-6">
-                  {images.map((img, index) => (
-                    <div
-                      key={index}
-                      className="relative aspect-[2.5/3] overflow-hidden"
-                    >
-                      <Image
-                        src={img}
-                        alt={`About ${index + 1}`}
-                        fill
-                        className="object-cover"
-                      />
-                    </div>
-                  ))}
+                <div className="relative w-full aspect-[4/4.5]">
+                  <Image
+                    src={image}
+                    alt={data.title}
+                    fill
+                    className="object-cover"
+                  />
                 </div>
               );
             }}
@@ -69,11 +62,12 @@ export default function AboutUs({ data }: Props) {
 
           <div className="absolute top-2 right-0 flex items-center gap-4">
             <button
-              className={`custom-prev flex h-10 w-10 items-center justify-center rounded-full transition-all
-      ${activeIndex === 1
-                  ? "bg-[#E9E9E9] text-[#A3A3A3]"
-                  : "bg-white border border-black text-black"
-                }`}
+              className={`about-prev flex h-10 w-10 items-center justify-center rounded-full transition-all
+      ${
+        activeIndex === 1
+          ? "bg-[#E9E9E9] text-[#A3A3A3]"
+          : "bg-white border border-black text-black"
+      }`}
             >
               <LeftIcon />
             </button>
@@ -82,7 +76,7 @@ export default function AboutUs({ data }: Props) {
               {activeIndex}/{data.images.length}
             </span>
 
-            <button className="custom-next flex h-10 w-10 items-center justify-center rounded-full border border-black bg-white text-black">
+            <button className="about-next flex h-10 w-10 items-center justify-center rounded-full border border-black bg-white text-black">
               <span className="rotate-180">
                 <LeftIcon />
               </span>
@@ -98,7 +92,10 @@ export default function AboutUs({ data }: Props) {
           spaceBetween={24}
           loop
           modules={[Autoplay, Navigation]}
-          navigation
+          // navigation={{
+          //   prevEl: ".about-prev",
+          //   nextEl: ".about-next",
+          // }}
           autoplay={{
             delay: 2500,
             disableOnInteraction: false,
