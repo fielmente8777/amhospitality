@@ -27,7 +27,7 @@ export const WebsiteNavData: websiteNavLink = {
   logo: "/images/logo.png",
   links: [
     { label: "Home", href: "/" },
-   
+  
     {
       label: "Stays",
       href: "/stay",
