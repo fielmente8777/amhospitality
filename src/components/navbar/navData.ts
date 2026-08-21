@@ -34,7 +34,7 @@ export const WebsiteNavData: websiteNavLink = {
       subLinks: [
         {
           label: "Wabi Sabi Resort",
-          href: "/stay/wabi-sabi",
+          href: "https://www.wabisabiresorts.com/",
         },
         {
           label: "The Blue Lake Resort",

@@ -97,13 +97,13 @@ export const ResortCardsData: ResortCard[] = [
     bookButton: "Book Now",
     moreButton: "More",
     bookhref: "/contact-us",
-    morehref: "/stay/wabi-sabi",
+    morehref: "https://www.wabisabiresorts.com/",
   },
 ];
 
 export const ResortPageData = [
   {
-    slug: "wabi-sabi",
+    slug: "https://www.wabisabiresorts.com/",
 
     banner: {
       image: "/images/stay2.jpg",
