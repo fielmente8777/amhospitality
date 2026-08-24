@@ -18,6 +18,8 @@ interface FooterData {
       href: string;
       label2?: string;
       href2?: string;
+      label3?: string;
+      href3?: string;
     }[];
   }[];
 }
@@ -37,6 +39,8 @@ interface WebsiteFooterData {
       href: string;
       label2?: string;
       href2?: string;
+      label3?: string;
+      href3?: string;
     }[];
   }[];
 }
@@ -115,6 +119,8 @@ interface WebSiteFooterData {
       href: string;
       label2?: string;
       href2?: string;
+      label3?: string;
+      href3?: string;
     }[];
   }[];
 }
@@ -168,15 +174,15 @@ export const webSiteFooterData: WebSiteFooterData = {
       links: [
         {
           label: "Privacy Policy",
-          href: "#",
+          href: "/privacy-policy",
         },
         {
           label: "Cancellation Policy",
-          href: "#",
+          href: "/cancellation-policy",
         },
         {
-          label: "Terms & Conditions",
-          href: "#",
+          label: "In-House Guest Policy",
+          href: "/in-house-guest-policy",
         },
       ],
     },
@@ -184,16 +190,22 @@ export const webSiteFooterData: WebSiteFooterData = {
       title: "Contact Details",
       links: [
         {
-          label: "Lorem ipsum dolor sit amet,\nconsectetur adipiscing elit.",
-          href: "#",
+          label: "Shop No. 116, First Floor, Ananta Arcade, Wasan Nagar, Pathardi Phata, Nashik – 422010 Maharashtra",
+          href: "https://maps.app.goo.gl/AfHZX4hJu3oc6cbn6?g_st=iw",
         },
         {
-          label: "+91 XXXXX XXXXX",
-          href: "tel:+91XXXXXXXXXX",
+          label: "+91 8065072001",
+          href: "tel:+918065072001",
+          label2: "+91 8554929929",
+          href2: "tel:+918554929929",
         },
         {
-          label: "info@demo.in",
-          href: "mailto:info@demo.in",
+          label: "sales@amhotels.in",
+          href: "mailto:sales@amhotels.in",
+          label2: "INFO@AMHOTELS.IN",
+          href2: "mailto:INFO@AMHOTELS.IN",
+          label3: "CEO@AMHOTELS.IN",
+          href3: "mailto:CEO@AMHOTELS.IN",
         },
       ],
     },
@@ -207,6 +219,8 @@ export interface ContactInfo {
     href: string;
     label2?: string;
     href2?: string;
+    label3?: string;
+    href3?: string;
     icon: React.ReactNode;
   }[];
 }

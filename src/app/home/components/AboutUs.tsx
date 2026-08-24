@@ -53,6 +53,8 @@ export default function AboutUs({ data }: Props) {
                     src={image}
                     alt={data.title}
                     fill
+                    sizes="(max-width: 768px) 100vw, 33vw"
+                    unoptimized
                     className="object-cover"
                   />
                 </div>
@@ -113,6 +115,8 @@ export default function AboutUs({ data }: Props) {
                   src={images}
                   alt={`About`}
                   fill
+                  sizes="100vw"
+                  unoptimized
                   className="object-cover"
                 />
               </div>

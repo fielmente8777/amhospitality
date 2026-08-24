@@ -71,7 +71,7 @@ export const AboutUsData = {
     "/images/about3.jpg",
   ],
   description:
-    'Ante Meridiem Hospitality Pvt. Ltd. was established with a vision to redefine hospitality management by combining operational expertise, strategic marketing and exceptional guest experiences.From independent resorts to large hospitality assets, we specialize in turning underperforming properties into thriving destinations.<strong class="font-semibold" >Our Mission</strong> - To create memorable guest experiences while maximizing long-term value for hospitality asset owners.<strong class="font-semibold" >Our Vision</strong> - To become India’s most trusted hospitality management and leasing company.',
+    'Welcome to AM Hotels & Resorts, a hospitality brand of Ante Meridiem Hospitality Pvt. Ltd., where every stay begins with warmth and every experience is shaped with genuine care. We believe hospitality is not simply about offering a room, serving a meal, or providing a destination. It is about understanding why a guest has travelled, anticipating what will make the journey more comfortable, and creating moments that remain long after departure. Our hotels and resorts are designed for guests who value comfort, character, thoughtful service, and a true sense of place. Whether it is a quiet leisure break, a family holiday, a romantic escape, a destination wedding, a corporate retreat, a celebration, or a group getaway, our aim is to make every interaction feel personal, effortless, and gracious.',
 };
 
 export const DiningData = {
@@ -154,38 +154,38 @@ export const TestimonialsData = {
     {
       rating: 5,
       review:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-      name: "Lorem Ipsum",
+        "Everything was great. Beautiful location and amazing employees. Mr Mangal was great as we were celebrating anniversary he arranged a cake in our room. Also restaurant team was hospitable.",
+      name: "Nikhil",
     },
     {
       rating: 5,
       review:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.",
-      name: "Lorem Ipsum",
+        "The rooms were spacious and clean. It has a beautiful view and the pool was small but good as well. Would love to visit again in the rainy season.",
+      name: "Deshpande",
     },
     {
       rating: 5,
       review:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
-      name: "Lorem Ipsum",
+        "A hidden gem at Igatpuri. Everything thing was excellent in term of Rooms, Views Food. Only pool size was small and need cleanliness. Room tip- prefer getting Superior rooms on first floor which has the best view.",
+      name: "Meghna",
     },
     {
       rating: 5,
       review:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-      name: "Lorem Ipsum",
+        "Having amazing stay with family at Wabi Sabi.. Good to have place like this which not only keeps you away from city noise and pollution but you can experience a very peaceful and memorable stay.",
+      name: "Amit Rana",
     },
     {
       rating: 5,
       review:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.",
-      name: "Lorem Ipsum",
+        "The location and the scenic surroundings is exceptionally good. The staff very very helpful.",
+      name: "Shahjan",
     },
     {
       rating: 5,
       review:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
-      name: "Lorem Ipsum",
+        "It is definitely a value for money location. The ambience is great and it puts you right in the midst of the nature. For people who love monsoon and winters it is definitely a must try.",
+      name: "Aakash",
     },
   ],
 };

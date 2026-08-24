@@ -9,16 +9,10 @@ export const ContactInfoData = {
 
   contact: {
     title: "ANTE MERIDIEM HOSPITALITY PVT. LTD.",
-    address: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-     addressLink: "https://maps.google.com/?q=Your+Address",
-    phones: [
-      "+91 7984717453",
-      "+91 7798622209",
-    ],
-    email: "ceo@amhotels.in",
+    address:
+      "Shop No. 116, First Floor, Ananta Arcade, Wasan Nagar, Pathardi Phata, Nashik – 422010 Maharashtra",
+    addressLink: "https://maps.app.goo.gl/AfHZX4hJu3oc6cbn6?g_st=iw",
+    phones: ["+91 8065072001", "+91 8554929929"],
+    email: "info@amhotels.in",
   },
-
-
 };
-
-

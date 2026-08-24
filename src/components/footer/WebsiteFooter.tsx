@@ -9,7 +9,7 @@ const WebsiteFooter = () => {
       <Container>
         {/* Logo */}
         <div className="flex justify-center items-center  border-none py-10">
-            <div className="h-px flex-1 border-t border-footer1" />
+          <div className="h-px flex-1 border-t border-footer1" />
           <div className="relative w-52 aspect-[2/1]">
             <Image
               src={webSiteFooterData.logo}
@@ -18,7 +18,7 @@ const WebsiteFooter = () => {
               className="object-contain"
             />
           </div>
-            <div className="flex-1 border-t border-footer1" />
+          <div className="flex-1 border-t border-footer1" />
         </div>
 
         {/* Footer Links */}
@@ -30,12 +30,36 @@ const WebsiteFooter = () => {
               <ul className="space-y-3 text-[18px]">
                 {list.links.map((item, i) => (
                   <li key={i}>
-                    <Link
-                      href={item.href}
-                      className="text-secondary hover:text-primary"
-                    >
-                      {item.label}
-                    </Link>
+                    <div className="flex flex-wrap items-center gap-1">
+                      <Link
+                        href={item.href}
+                        className="text-secondary hover:text-primary"
+                      >
+                        {item.label}
+                      </Link>
+                      {item.label2 && item.href2 && (
+                        <>
+                          <span className="text-secondary">, </span>
+                          <Link
+                            href={item.href2}
+                            className="text-secondary hover:text-primary"
+                          >
+                            {item.label2}
+                          </Link>
+                        </>
+                      )}
+                      {item.label3 && item.href3 && (
+                        <>
+                          <span className="text-secondary">, </span>
+                          <Link
+                            href={item.href3}
+                            className="text-secondary hover:text-primary"
+                          >
+                            {item.label3}
+                          </Link>
+                        </>
+                      )}
+                    </div>
                   </li>
                 ))}
               </ul>

@@ -113,7 +113,7 @@ export const CoffeeIcon = () => (
 export const LeftIcon = () => {
   return (
     <svg width="8" height="16" viewBox="0 0 8 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M6.97462 16L8 14.8239L2.05075 8L8 1.17612L6.97462 0L0 8L6.97462 16Z" fill="#222222" fill-opacity="0.3" />
+      <path d="M6.97462 16L8 14.8239L2.05075 8L8 1.17612L6.97462 0L0 8L6.97462 16Z" fill="#222222" fillOpacity="0.3" />
     </svg>
 
   )

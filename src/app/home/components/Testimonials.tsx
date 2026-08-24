@@ -42,7 +42,7 @@ export default function Testimonials({ data }: Props) {
               <div className="rounded-lg bg-white p-6 drop-shadow-xl">
                 <div className="mb-4 flex gap-1">
                   {Array.from({ length: item.rating }).map((_, index) => (
-                    <StarIconOrange />
+                    <StarIconOrange key={index} />
                   ))}
                 </div>
 

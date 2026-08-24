@@ -40,7 +40,9 @@ export default function ContactInfo({ data }: Props) {
 
               <div className="mt-8 space-y-5">
                 <div className="flex items-start gap-3">
-                  <MapIcon />
+                  <span className="shrink-0 mt-1">
+                    <MapIcon />
+                  </span>
                   <Link
                     href={data.contact.addressLink}
                     target="_blank"
@@ -51,7 +53,9 @@ export default function ContactInfo({ data }: Props) {
                 </div>
 
                 <div className="flex items-center gap-3">
-                  <PIcon />
+                  <span className="shrink-0">
+                    <PIcon />
+                  </span>
                   <Link
                     href={`tel:${data.contact.phones[0]}`}
                     className="text-secondary hover:text-primary transition-colors"
@@ -61,7 +65,9 @@ export default function ContactInfo({ data }: Props) {
                 </div>
 
                 <div className="flex items-center gap-3">
-                  <ChatIcon />
+                  <span className="shrink-0">
+                    <ChatIcon />
+                  </span>
                   <Link
                     href={`tel:${data.contact.phones[1]}`}
                     className="text-secondary hover:text-primary transition-colors"
@@ -71,7 +77,9 @@ export default function ContactInfo({ data }: Props) {
                 </div>
 
                 <div className="flex items-center gap-3">
-                  <MailIcon />
+                  <span className="shrink-0">
+                    <MailIcon />
+                  </span>
                   <Link
                     href={`mailto:${data.contact.email}`}
                     className="text-secondary hover:text-primary transition-colors"
@@ -81,10 +89,14 @@ export default function ContactInfo({ data }: Props) {
                 </div>
               </div>
 
-              <button className="mt-8 inline-flex items-center gap-2 rounded-md border border-primary px-5 py-2 text-primary transition hover:bg-primary hover:text-white">
+              <Link
+                href={data.contact.addressLink}
+                target="_blank"
+                className="mt-8 inline-flex items-center gap-2 rounded-md border border-primary px-5 py-2 text-primary transition hover:bg-primary hover:text-white"
+              >
                 <span>Get Direction</span>
                 <DIcon />
-              </button>
+              </Link>
             </div>
 
             {/* Right Side */}

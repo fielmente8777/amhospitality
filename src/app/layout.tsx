@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 import "./style.scss";
+import Popup from "@/components/Popup";
 
 import NavBar from "@/components/navbar/WebsiteNav";
 import Footer from "@/components/footer/WebsiteFooter";
@@ -78,6 +79,7 @@ export default function RootLayout({
       </head>
       <body className="" suppressHydrationWarning={true}>
         <WebProvider>
+          <Popup />
           <NavBar />
           {children}
           <Footer />
