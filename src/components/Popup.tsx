@@ -51,11 +51,11 @@ const Popup = () => {
 
   return (
     <div
-      className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 px-4"
+      className="fixed inset-0 bg-black/90 flex items-center justify-center z-50 px-4"
       onClick={handleClose}
     >
       <div
-        className="max-w-2xl w-full relative"
+        className="max-w-2xl w-full relative rounded-[11px] border-2 border-white/80"
         onClick={(e) => e.stopPropagation()}
       >
         {/* <button
@@ -73,7 +73,7 @@ const Popup = () => {
             src="/popupImage.jpg"
             alt="Image"
           />
-          <div className="absolute inset-0 z-10 bg-linear-to-t from-black/80 to-black/10" />
+          <div className="absolute inset-0 z-10 bg-linear-to-t from-black/80 to-black/40" />
 
           <div className="absolute inset-0 z-20 flex flex-col items-center justify-center px-6 text-center text-white">
             {/* TITLE */}
@@ -117,8 +117,8 @@ const Popup = () => {
               href="/"
               onClick={handleClose}
               className="
+              absolute bottom-6
       rounded-xl
-      border border-white/80
       bg-primary
       px-6 py-3
       text-xs

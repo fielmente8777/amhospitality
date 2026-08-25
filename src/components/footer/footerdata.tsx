@@ -156,6 +156,10 @@ export const webSiteFooterData: WebSiteFooterData = {
           href: "/",
         },
         {
+          label:"About",
+          href:"/about",
+        },
+        {
           label: "Stays",
           href: "/stay",
         },

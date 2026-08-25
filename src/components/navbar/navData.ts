@@ -6,7 +6,6 @@ export const navData = {
   buttons: [{ label: "BOOK NOW", href: contact.WhatsappCta }],
 };
 
-
 interface websiteNavLink {
   logo: string;
   links: {
@@ -27,7 +26,11 @@ export const WebsiteNavData: websiteNavLink = {
   logo: "/images/logo.png",
   links: [
     { label: "Home", href: "/" },
-  
+    {
+      label: "About",
+      href: "/about",
+    },
+
     {
       label: "Stays",
       href: "/stay",

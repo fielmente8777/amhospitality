@@ -1513,3 +1513,19 @@ export const DIcon = () => (
 </svg>
 
 );
+
+export const ContactIcon = () => (
+<svg
+  width={16}
+  height={16}
+  viewBox="0 0 16 16"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <path
+    d="M5.60047 0.800049L4.48047 2.00005L10.4005 8.00005L4.48047 14L5.60047 15.2L12.8005 8.00005L5.60047 0.800049Z"
+    fill="#80572E"
+  />
+</svg>
+
+);
