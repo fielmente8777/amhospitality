@@ -160,7 +160,7 @@ export const webSiteFooterData: WebSiteFooterData = {
           href:"/about",
         },
         {
-          label: "Stays",
+          label: "Our Resorts",
           href: "/stay",
         },
         // {

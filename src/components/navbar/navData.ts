@@ -32,7 +32,7 @@ export const WebsiteNavData: websiteNavLink = {
     },
 
     {
-      label: "Stays",
+      label: "Our Resorts",
       href: "/stay",
       subLinks: [
         {
