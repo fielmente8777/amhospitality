@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
+import { Cormorant_Garamond } from "next/font/google";
 import "./globals.css";
 import "./style.scss";
 import Popup from "@/components/Popup";
@@ -45,6 +46,12 @@ const gilroy = localFont({
   display: "swap",
 });
 
+const cormorant = Cormorant_Garamond({
+  subsets: ["latin"],
+  variable: "--font-cormorant",
+  display: "swap",
+});
+
 export const metadata: Metadata = {
   title: "Am hospitality",
   description: "",
@@ -56,7 +63,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${gilroy.variable} h-full antialiased`}>
+    <html lang="en" className={`${gilroy.variable} ${cormorant.variable} h-full antialiased`}>
       <head>
         <link
           rel="apple-touch-icon"

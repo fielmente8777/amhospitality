@@ -192,6 +192,97 @@ export const policiesPageData: PolicyPageItem[] = [
 
         <h3>21. Changes to this Privacy Policy</h3>
         <p>We may update this Privacy Policy when our services, technology, legal obligations, booking systems, CRM tools or marketing practices change. The latest version will be published on www.amhotels.in with the revised effective date.</p>
+        <h3>22. Contact and Privacy Requests</h3>
+
+<p>
+  For privacy questions, access/correction requests, marketing opt-outs or
+  grievances, please contact:
+</p>
+
+<table style="width: 100%; border-collapse: collapse; margin-top: 1rem;">
+  <tbody>
+    <tr>
+      <td
+        style="
+          border: 1px solid #000;
+          padding: 0.5rem;
+          font-weight: 700;
+          width: 50%;
+        "
+      >
+        Company
+      </td>
+      <td
+        style="
+          border: 1px solid #000;
+          padding: 0.5rem;
+        "
+      >
+        Ante Meridiem Hospitality Pvt. Ltd.
+      </td>
+    </tr>
+
+    <tr>
+      <td
+        style="
+          border: 1px solid #000;
+          padding: 0.5rem;
+          font-weight: 700;
+        "
+      >
+        Brand
+      </td>
+      <td
+        style="
+          border: 1px solid #000;
+          padding: 0.5rem;
+        "
+      >
+        AM Hotels & Resorts
+      </td>
+    </tr>
+
+    <tr>
+      <td
+        style="
+          border: 1px solid #000;
+          padding: 0.5rem;
+          font-weight: 700;
+        "
+      >
+        Website
+      </td>
+      <td
+        style="
+          border: 1px solid #000;
+          padding: 0.5rem;
+        "
+      >
+        www.amhotels.in
+      </td>
+    </tr>
+
+    <tr>
+      <td
+        style="
+          border: 1px solid #000;
+          padding: 0.5rem;
+          font-weight: 700;
+        "
+      >
+        Email
+      </td>
+      <td
+        style="
+          border: 1px solid #000;
+          padding: 0.5rem;
+        "
+      >
+        info@amhotels.in
+      </td>
+    </tr>
+  </tbody>
+</table>
       </div>
     `,
   },

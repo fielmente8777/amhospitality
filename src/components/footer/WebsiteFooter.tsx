@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Container } from "../sectionComponants";
 import { webSiteFooterData } from "./footerdata";
+import { MailIcon, MapIcon, PIcon } from "@/utils/icons";
 
 const WebsiteFooter = () => {
   return (
@@ -22,49 +23,69 @@ const WebsiteFooter = () => {
         </div>
 
         {/* Footer Links */}
-        <div className="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-[1fr_1fr_1fr_1.4fr] gap-10 py-10 border-b border-footer1">
-          {webSiteFooterData.lists.map((list, index) => (
-            <div key={index}>
-              <h3 className="font-semibold text-[24px] mb-5">{list.title}</h3>
+        {/* Footer Links */}
+        <div className="grid grid-cols-1 gap-10 border-b border-footer1 py-10 md:grid-cols-4 lg:grid-cols-[1fr_1fr_1fr_1.4fr]">
+          {webSiteFooterData.lists.map((list, index) => {
+            const isContactSection = list.title === "Contact Details";
 
-              <ul className="space-y-3 text-[18px]">
-                {list.links.map((item, i) => (
-                  <li key={i}>
-                    <div className="flex flex-wrap items-center gap-1">
-                      <Link
-                        href={item.href}
-                        className="text-secondary hover:text-primary"
-                      >
-                        {item.label}
-                      </Link>
-                      {item.label2 && item.href2 && (
-                        <>
-                          <span className="text-secondary">, </span>
+            return (
+              <div key={index}>
+                <h3 className="mb-5 text-[24px] font-semibold">{list.title}</h3>
+
+                <ul className="space-y-3 text-[18px]">
+                  {list.links.map((item, i) => (
+                    <li key={i}>
+                      <div className="flex items-start gap-3">
+                        {/* CONTACT ICONS ONLY */}
+                        {isContactSection && (
+                          <span className="mt-1 shrink-0 text-primary">
+                            {i === 0 && <MapIcon />}
+                            {i === 1 && <PIcon />}
+                            {i === 2 && <MailIcon />}
+                          </span>
+                        )}
+
+                        <div className="flex flex-wrap items-center gap-1">
                           <Link
-                            href={item.href2}
-                            className="text-secondary hover:text-primary"
+                            href={item.href}
+                            className="text-secondary transition-colors hover:text-primary"
                           >
-                            {item.label2}
+                            {item.label}
                           </Link>
-                        </>
-                      )}
-                      {item.label3 && item.href3 && (
-                        <>
-                          <span className="text-secondary">, </span>
-                          <Link
-                            href={item.href3}
-                            className="text-secondary hover:text-primary"
-                          >
-                            {item.label3}
-                          </Link>
-                        </>
-                      )}
-                    </div>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
+
+                          {item.label2 && item.href2 && (
+                            <>
+                              <span className="text-secondary">, </span>
+
+                              <Link
+                                href={item.href2}
+                                className="text-secondary hover:text-primary"
+                              >
+                                {item.label2}
+                              </Link>
+                            </>
+                          )}
+
+                          {item.label3 && item.href3 && (
+                            <>
+                              <span className="text-secondary">, </span>
+
+                              <Link
+                                href={item.href3}
+                                className="text-secondary hover:text-primary"
+                              >
+                                {item.label3}
+                              </Link>
+                            </>
+                          )}
+                        </div>
+                      </div>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            );
+          })}
         </div>
       </Container>
       <div className="border-none bg-white">
