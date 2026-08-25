@@ -15,7 +15,7 @@ const Popup = () => {
     if (hour >= 5 && hour < 12) {
       setTimeText("AM MORNING");
     } else if (hour >= 12 && hour < 17) {
-      setTimeText("AM NOON");
+      setTimeText("AM  AFTER NOON");
     } else {
       setTimeText("AM EVENING");
     }
