@@ -103,7 +103,7 @@ export const ResortCardsData: ResortCard[] = [
 
 export const ResortPageData = [
   {
-    slug: "https://www.wabisabiresorts.com/",
+    slug: "wabi-sabi",
 
     banner: {
       image: "/images/stay2.jpg",
