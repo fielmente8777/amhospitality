@@ -13,6 +13,7 @@ const LandingFooter = () => {
   if (pathName === "/thank-you/") {
     return null;
   }
+  
   return (
     <footer className="max_screen_width">
       <Container>
