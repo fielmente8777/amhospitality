@@ -4,6 +4,19 @@ export interface HomeBannerProps {
   description: string;
 }
 
+export interface DestinationItem {
+  logo?: string;
+  icon?: "goa" | string;
+  title: string;
+  status: string;
+}
+
+export interface OurDestinationsProps {
+  title: string;
+  subtitle: string;
+  destinations: DestinationItem[];
+}
+
 export interface AboutUsProps {
   title: string;
   subtitle: string;
@@ -53,6 +66,43 @@ export const HomeBannerData = {
 
   description:
     "Ante Meridiem Hospitality Pvt. Ltd. transforms resorts, hotels, villas and hospitality assets into profitable destinations through operational excellence, revenue management and guest-centric experiences.",
+};
+
+export const OurDestinationsData: OurDestinationsProps = {
+  title: "OUR DESTINATIONS",
+  subtitle: "Existing Properties and Upcoming Destinations",
+  destinations: [
+    {
+      logo: "/images/logo-ws1.png",
+      title: "WABI SABI RESORT",
+      status: "IGATPURI",
+    },
+    {
+      logo: "/images/logo-bl.png",
+      title: "THE BLUE LAKE RESORT",
+      status: "IGATPURI",
+    },
+    {
+      icon: "goa",
+      title: "GOA",
+      status: "COMING SOON",
+    },
+    {
+      icon: "sambhajinagar",
+      title: "SAMBHAJINAGAR",
+      status: "COMING SOON",
+    },
+    {
+      icon: "jim-corbett",
+      title: "JIM CORBETT",
+      status: "COMING SOON",
+    },
+    {
+      icon: "madhya-pradesh",
+      title: "MADHYA PRADESH",
+      status: "COMING SOON",
+    },
+  ],
 };
 
 export const AboutUsData = {

@@ -13,9 +13,12 @@ export const metadata: Metadata = {
 
 export default function CancellationPolicyPage() {
   return (
-    <main className="bg-white min-h-screen pb-16">
+    <main className="min-h-screen pb-16">
       {/* Top Banner / Header */}
-      <section className="bg-secondary text-white py-12 md:py-16">
+      <Section
+        defaultPadding={false}
+        sectionClassName="bg-secondary text-white py-12 md:py-16"
+      >
         <Container>
           <div className="w-full text-center space-y-4">
             <span className="inline-block text-xs uppercase tracking-widest text-primary font-semibold px-3 py-1 bg-white/10 rounded-full">
@@ -29,7 +32,7 @@ export default function CancellationPolicyPage() {
             </p>
           </div>
         </Container>
-      </section>
+      </Section>
 
       {/* Main Content Body */}
       <Section defaultPadding={false} sectionClassName="py-10 md:py-14">

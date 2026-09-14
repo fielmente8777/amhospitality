@@ -12,18 +12,17 @@ interface Props {
 export default function HomeBanner({ data }: Props) {
   return (
     <Section sectionClassName="py-0!">
-      {/* Banner Image */}
-      <div className="relative w-full h-[400px] md:h-[600px]">
-
-        <Image
+      {/* Banner Image / Background */}
+      <div className="relative w-full h-[400px] md:h-[600px] bg-[#281F16]">
+        {/* <Image
           src={data.image}
           alt={data.title}
           fill
           priority
           className="object-cover"
-        />
+        /> */}
         {/* Overlay */}
-        <div className="absolute inset-0 bg-black/40" />
+        {/* <div className="absolute inset-0 bg-black/40" /> */}
 
         {/* Content */}
         <div className="absolute inset-0 flex items-center justify-center md:px-6">
@@ -39,13 +38,10 @@ export default function HomeBanner({ data }: Props) {
               <Form1 />
             </div>
           </div>
-
         </div>
       </div>
 
-
-
-      <div className=" md:hidden mt-6">
+      <div className="md:hidden mt-6">
         <Form1 />
       </div>
     </Section>

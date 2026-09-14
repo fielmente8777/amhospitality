@@ -1,5 +1,6 @@
 import SlidingTitle from "@/components/sliders/SlidingTitle";
 import AboutUs from "./home/components/AboutUs";
+import OurDestinations from "./home/components/OurDestinations";
 import Dining from "./home/components/Dining";
 import ExploreMore from "./home/components/ExploreMore";
 import HomeBanner from "./home/components/HomeBanner";
@@ -7,6 +8,7 @@ import Hospitality from "./home/components/Hospitality";
 import Testimonials from "./home/components/Testimonials";
 import {
   AboutUsData,
+  OurDestinationsData,
   DiningData,
   ExploreMoreData,
   HomeBannerData,
@@ -20,6 +22,7 @@ export default function Home() {
   return (
     <main>
       <HomeBanner data={HomeBannerData} />
+      <OurDestinations data={OurDestinationsData} />
       <AboutUs data={AboutUsData} />
       <SlidingTitle2 items={values} />
       <Dining data={DiningData} />
