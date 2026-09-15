@@ -4,6 +4,7 @@ export const ContactHeroData = {
     "We look forward to making your stay with AM Hospitality comfortable and memorable. If you have any queries, please feel free to contact us directly or fill out the form below, and our team will be happy to assist you.",
 };
 
+
 export const ContactInfoData = {
   image: "/images/contact.jpg",
 
