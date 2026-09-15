@@ -60,7 +60,7 @@ export interface HospitalityProps {
   }[];
 }
 export const HomeBannerData = {
-  image: "/images/homebg.jpg",
+  image: "/images/homebg-2.jpeg",
 
   title: "WE LEASE, OPERATE & GROW HOSPITALITY ASSETS",
 
@@ -89,8 +89,8 @@ export const OurDestinationsData: OurDestinationsProps = {
     },
     {
       icon: "sambhajinagar",
-      title: "SAMBHAJINAGAR",
-      status: "COMING SOON",
+      title: "CHHATRAPATI SAMBHAJINAGAR",
+      status: "AURANGABAD, MAHARASHTRA",
     },
     {
       icon: "jim-corbett",
@@ -129,28 +129,28 @@ export const DiningData = {
   subtitle: "An Experience in Every Bite.",
   slides: [
     {
-      image: "/images/dining1.jpg",
+      image: "/images/dining2.jpg",
       alt: "Dining Image 1",
     },
     {
-      image: "/images/dining2.jpg",
+      image: "/images/dining3.jpeg",
       alt: "Dining Image 2",
     },
     {
-      image: "/images/dining1.jpg",
+      image: "/images/dining4.jpeg",
       alt: "Dining Image 3",
     },
+    // {
+    //   image: "/images/dining2.jpg",
+    //   alt: "Dining Image 4",
+    // },
     {
-      image: "/images/dining2.jpg",
+      image: "/images/dining5.jpeg",
       alt: "Dining Image 4",
     },
     {
-      image: "/images/dining1.jpg",
+      image: "/images/dining6.jpeg",
       alt: "Dining Image 5",
-    },
-    {
-      image: "/images/dining2.jpg",
-      alt: "Dining Image 6",
     },
   ],
 };
