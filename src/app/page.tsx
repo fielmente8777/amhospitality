@@ -18,6 +18,7 @@ import {
 } from "./home/pageData";
 import SlidingTitle2 from "@/components/sliders/SlidingTitle2";
 
+
 export default function Home() {
   return (
     <main>
