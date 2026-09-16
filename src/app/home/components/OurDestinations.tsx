@@ -61,24 +61,35 @@ export default function OurDestinations({ data }: Props) {
             }}
             renderSlide={(item) => {
               return (
-                <div className="group rounded-lg bg-white p-6 md:p-8 drop-shadow-xl flex flex-col items-center justify-center min-h-[250px] text-center transition-all duration-300">
+                <div className="group relative rounded-lg bg-white p-6 md:p-8 drop-shadow-xl flex flex-col items-center justify-center min-h-[250px] text-center transition-all duration-300">
+                  {/* Top-Left Brand Logo */}
+                  <div className="absolute top-3.5 left-4 md:top-4 md:left-5 w-20 h-10 md:w-24 md:h-12">
+                    <Image
+                      src="/images/logo.png"
+                      alt="AM Hospitality"
+                      fill
+                      sizes="100px"
+                      className="object-contain object-left-top"
+                    />
+                  </div>
+
                   {/* Logo or Icon */}
                   <div className="relative w-36 h-20 md:w-44 md:h-24 flex items-center justify-center transition-transform duration-300 group-hover:scale-105">
                     {item.icon === "goa" ? (
-                      <GoaIcon className="w-16 h-16 md:w-20 md:h-20" />
+                      <GoaIcon className="w-14 h-14 md:w-18 md:h-18" />
                     ) : item.icon === "sambhajinagar" ? (
-                      <SambhajinagarIcon className="w-16 h-16 md:w-20 md:h-20" />
+                      <SambhajinagarIcon className="w-14 h-14 md:w-18 md:h-18" />
                     ) : item.icon === "jim-corbett" ? (
-                      <JimCorbettIcon className="w-16 h-16 md:w-20 md:h-20" />
+                      <JimCorbettIcon className="w-14 h-14 md:w-18 md:h-18" />
                     ) : item.icon === "madhya-pradesh" ? (
-                      <MadhyaPradeshIcon className="w-16 h-16 md:w-20 md:h-20" />
+                      <MadhyaPradeshIcon className="w-14 h-14 md:w-18 md:h-18" />
                     ) : item.logo ? (
                       <Image
                         src={item.logo}
                         alt={item.title}
                         fill
                         sizes="(max-width: 768px) 150px, 200px"
-                        className="object-contain"
+                        className={`object-contain ${item.title.includes("WABI") ? "p-2 md:p-3 scale-95" : ""}`}
                       />
                     ) : null}
                   </div>
