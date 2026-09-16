@@ -89,7 +89,7 @@ export default function OurDestinations({ data }: Props) {
                         alt={item.title}
                         fill
                         sizes="(max-width: 768px) 150px, 200px"
-                        className="object-contain"
+                        className={`object-contain ${item.title.includes("WABI") ? "p-2 md:p-3 scale-95" : ""}`}
                       />
                     ) : null}
                   </div>
