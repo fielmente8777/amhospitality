@@ -24,12 +24,18 @@ export default function Testimonials({ data }: Props) {
             data={data.testimonials}
             slidesPerView={1}
             spaceBetween={32}
+            loop={true}
             modules={[Autoplay, Navigation]}
             navigation={{
               prevEl: ".testimonial-prev",
               nextEl: ".testimonial-next",
             }}
             swiperSlideClassName="py-10"
+            autoplay={{
+              delay: 2500,
+              disableOnInteraction: false,
+              pauseOnMouseEnter: true,
+            }}
             breakpoints={{
               768: {
                 slidesPerView: 3,
