@@ -42,7 +42,7 @@ export default function OurDestinations({ data }: Props) {
               prevEl: ".destinations-prev",
               nextEl: ".destinations-next",
             }}
-            swiperSlideClassName="py-10"
+            swiperSlideClassName="py-10 h-auto"
             autoplay={{
               delay: 2500,
               disableOnInteraction: false,
@@ -61,9 +61,9 @@ export default function OurDestinations({ data }: Props) {
             }}
             renderSlide={(item) => {
               return (
-                <div className="group relative rounded-lg bg-white p-6 md:p-8 drop-shadow-xl flex flex-col items-center justify-center min-h-[250px] text-center transition-all duration-300">
+                <div className="group relative rounded-xl bg-white px-6 py-9 md:px-8 md:py-11 drop-shadow-xl flex flex-col items-center justify-center min-h-[300px] md:min-h-[340px] h-full text-center transition-all duration-300 hover:drop-shadow-2xl">
                   {/* Top-Left Brand Logo */}
-                  <div className="absolute top-3.5 left-4 md:top-4 md:left-5 w-20 h-10 md:w-24 md:h-12">
+                  <div className="absolute top-4 left-4 md:top-5 md:left-6 w-20 h-10 md:w-24 md:h-12">
                     <Image
                       src="/images/logo.png"
                       alt="AM Hospitality"
@@ -76,13 +76,13 @@ export default function OurDestinations({ data }: Props) {
                   {/* Logo or Icon */}
                   <div className="relative w-36 h-20 md:w-44 md:h-24 flex items-center justify-center transition-transform duration-300 group-hover:scale-105">
                     {item.icon === "goa" ? (
-                      <GoaIcon className="w-14 h-14 md:w-18 md:h-18" />
+                      <GoaIcon className="w-16 h-16 md:w-20 md:h-20" />
                     ) : item.icon === "sambhajinagar" ? (
-                      <SambhajinagarIcon className="w-14 h-14 md:w-18 md:h-18" />
+                      <SambhajinagarIcon className="w-16 h-16 md:w-20 md:h-20" />
                     ) : item.icon === "jim-corbett" ? (
-                      <JimCorbettIcon className="w-14 h-14 md:w-18 md:h-18" />
+                      <JimCorbettIcon className="w-16 h-16 md:w-20 md:h-20" />
                     ) : item.icon === "madhya-pradesh" ? (
-                      <MadhyaPradeshIcon className="w-14 h-14 md:w-18 md:h-18" />
+                      <MadhyaPradeshIcon className="w-16 h-16 md:w-20 md:h-20" />
                     ) : item.logo ? (
                       <Image
                         src={item.logo}
@@ -95,17 +95,24 @@ export default function OurDestinations({ data }: Props) {
                   </div>
 
                   {/* Title */}
-                  <h3 className="mt-4 text-[16px] md:text-[18px] font-semibold tracking-[0.15em] text-secondary uppercase">
+                  <h3 className="mt-5 text-[16px] md:text-[18px] font-semibold tracking-[0.15em] text-secondary uppercase leading-snug">
                     {item.title}
                   </h3>
 
+                  {/* Location */}
+                  {item.location && (
+                    <p className="mt-1.5 text-[13px] md:text-[14px] font-medium tracking-[0.15em] text-secondary uppercase">
+                      {item.location}
+                    </p>
+                  )}
+
                   {/* Status */}
-                  <p className="mt-1 text-[12px] md:text-[13px] tracking-[0.2em] text-[#8C7A6B] font-medium uppercase">
+                  <p className="mt-2 text-[12px] md:text-[13px] tracking-[0.2em] text-[#8C7A6B] font-medium uppercase">
                     {item.status}
                   </p>
 
                   {/* Decorative underline */}
-                  <div className="mt-2.5 w-12 h-[1.5px] bg-[#C5B49F] transition-all duration-300 group-hover:w-16 group-hover:bg-primary" />
+                  <div className="mt-3.5 w-12 h-[1.5px] bg-[#C5B49F] transition-all duration-300 group-hover:w-16 group-hover:bg-primary" />
                 </div>
               );
             }}

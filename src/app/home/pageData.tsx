@@ -8,6 +8,7 @@ export interface DestinationItem {
   logo?: string;
   icon?: "goa" | string;
   title: string;
+  location?: string;
   status: string;
 }
 
@@ -90,7 +91,8 @@ export const OurDestinationsData: OurDestinationsProps = {
     {
       icon: "sambhajinagar",
       title: "CHHATRAPATI SAMBHAJINAGAR",
-      status: "AURANGABAD, MAHARASHTRA",
+      location: "AURANGABAD, MAHARASHTRA",
+      status: "COMING SOON",
     },
     {
       icon: "jim-corbett",
