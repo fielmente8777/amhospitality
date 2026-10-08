@@ -38,7 +38,7 @@ const WebsiteNav = () => {
                 >
                   <span>{item.label}</span>
 
-                  {/* Absolute underline: doesn't alter flexbox layout or push sibling links */}
+                 
                   <span
                     className={`absolute bottom-0 left-2 right-2 h-[2px] bg-primary transition-all duration-300 pointer-events-none ${
                       isActive ? "scale-x-100 opacity-100" : "scale-x-0 opacity-0 group-hover:scale-x-100 group-hover:opacity-100 origin-left"
