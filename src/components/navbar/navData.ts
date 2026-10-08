@@ -41,7 +41,7 @@ export const WebsiteNavData: websiteNavLink = {
         },
         {
           label: "The Blue Lake Resort",
-          href: "/stay/blue-lake",
+          href: "https://thebluelake.in/",
         },
       ],
     },
