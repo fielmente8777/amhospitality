@@ -9,12 +9,14 @@ export interface DestinationItem {
   icon?: "goa" | string;
   title: string;
   status: string;
+  href: string;
 }
 
 export interface OurDestinationsProps {
   title: string;
   subtitle: string;
   destinations: DestinationItem[];
+
 }
 
 export interface AboutUsProps {
@@ -76,31 +78,37 @@ export const OurDestinationsData: OurDestinationsProps = {
       logo: "/images/logo-ws1.png",
       title: "WABI SABI RESORT",
       status: "IGATPURI",
+      href: "https://www.wabisabiresorts.com/",
     },
     {
       logo: "/images/logo-bl.png",
       title: "THE BLUE LAKE RESORT",
       status: "IGATPURI",
+      href: "https://thebluelake.in/",
     },
     {
       icon: "goa",
       title: "GOA",
       status: "COMING SOON",
+      href:"#",
     },
     {
       icon: "sambhajinagar",
       title: "CHHATRAPATI SAMBHAJINAGAR",
       status: "AURANGABAD, MAHARASHTRA",
+      href:"#",
     },
     {
       icon: "jim-corbett",
       title: "JIM CORBETT",
       status: "COMING SOON",
+      href:"#",
     },
     {
       icon: "madhya-pradesh",
       title: "MADHYA PRADESH",
       status: "COMING SOON",
+      href:"#",
     },
   ],
 };

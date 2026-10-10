@@ -14,6 +14,7 @@ import {
   MadhyaPradeshIcon,
 } from "@/utils/icons";
 import { useState } from "react";
+import Link from "next/link";
 
 interface Props {
   data: OurDestinationsProps;
@@ -61,7 +62,7 @@ export default function OurDestinations({ data }: Props) {
             }}
             renderSlide={(item) => {
               return (
-                <div className="group relative rounded-lg bg-white p-6 md:p-8 drop-shadow-xl flex flex-col items-center justify-center min-h-[250px] text-center transition-all duration-300">
+                <Link href={item.href} target="_blank"  className="group relative rounded-lg bg-white p-6 md:p-8 drop-shadow-xl flex flex-col items-center justify-center min-h-[250px] text-center transition-all duration-300">
                   {/* Top-Left Brand Logo */}
                   <div className="absolute top-3.5 left-4 md:top-4 md:left-5 w-20 h-10 md:w-24 md:h-12">
                     <Image
@@ -106,7 +107,7 @@ export default function OurDestinations({ data }: Props) {
 
                   {/* Decorative underline */}
                   <div className="mt-2.5 w-12 h-[1.5px] bg-[#C5B49F] transition-all duration-300 group-hover:w-16 group-hover:bg-primary" />
-                </div>
+                </Link>
               );
             }}
           />
