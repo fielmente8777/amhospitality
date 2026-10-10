@@ -194,8 +194,8 @@ export const webSiteFooterData: WebSiteFooterData = {
       title: "Contact Details",
       links: [
         {
-          label: "Shop No. 116, First Floor, Ananta Arcade, Wasan Nagar, Pathardi Phata, Nashik – 422010 Maharashtra",
-          href: "https://maps.app.goo.gl/AfHZX4hJu3oc6cbn6?g_st=iw",
+          label: "Office No. 116, First Floor, Ananta Arcade, Wasan Nagar, Pathardi Phata, Nashik – 422010 Maharashtra",
+          href: "https://share.google/CxnLIR0K13StINQ73",
         },
         {
           label: "+91 8065072001",
