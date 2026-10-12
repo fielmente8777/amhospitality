@@ -1,4 +1,3 @@
-import { Metadata } from "next";
 import { careersPageData } from "./components/careersPageData";
 import ContactHero from "./components/ContactHero";
 import JoinAlHathaifa from "./components/JoinAlHathaifa";
@@ -18,3 +17,4 @@ export default function CareersPage() {
         </main>
     );
 }
+

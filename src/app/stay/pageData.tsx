@@ -87,7 +87,7 @@ export const ResortCardsData: ResortCard[] = [
     bookButton: "Book Now",
     moreButton: "More",
     bookhref: "/contact-us",
-    morehref: "/stay/blue-lake",
+    morehref: "https://thebluelake.in/",
   },
   {
     image: "/images/stay2.jpg",
