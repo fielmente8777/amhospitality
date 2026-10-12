@@ -8,6 +8,7 @@ import { countries } from "@/utils/constent";
 const Form3 = () => {
   const {
     isSubmitting,
+    submitSuccess,
     errors,
     handleSubmit,
     formData,
@@ -21,11 +22,11 @@ const Form3 = () => {
   return (
     <form
       onSubmit={handleSubmit}
-      className="w-full max-w-[540px] rounded-2xl border border-[#3C3C3C] bg-white p-6 shadow-[0_10px_30px_rgba(0,0,0,0.12)]"
+      className="w-full rounded-xl border border-[#D5C7B5] bg-[#EFE8DD] p-6 sm:p-8 shadow-sm"
     >
       {/* Heading */}
-      <h3 className="mb-6 text-[30px] font-semibold text-secondary">
-        Inquiry Now
+      <h3 className="mb-6 text-2xl sm:text-3xl font-bold text-secondary">
+        Get In Touch
       </h3>
 
       {/* Name */}
@@ -36,7 +37,7 @@ const Form3 = () => {
           placeholder="Your full name*"
           value={formData.name}
           onChange={handleChange}
-          className="h-14 w-full rounded-md border border-[#3C3C3C] px-4 outline-none placeholder:text-[#777]"
+          className="h-14 w-full rounded-md border border-[#C5B49F]/60 bg-white px-4 text-secondary outline-none placeholder:text-[#777] transition focus:border-primary focus:ring-1 focus:ring-primary"
         />
 
         {errors.name && (
@@ -44,15 +45,15 @@ const Form3 = () => {
         )}
       </div>
 
-      {/* Phone */}
+      {/* Phone with Country Code */}
       <div className="mb-4">
-        <div className="flex h-14 overflow-hidden rounded-md border border-[#3C3C3C]">
-          <div className="relative border-r border-[#3C3C3C]">
+        <div className="flex h-14 overflow-hidden rounded-md border border-[#C5B49F]/60 bg-white transition focus-within:border-primary focus-within:ring-1 focus-within:ring-primary">
+          <div className="relative border-r border-[#C5B49F]/60 bg-white">
             <select
               name="countryCode"
               value={formData.countryCode}
               onChange={(e) => setFieldValue("countryCode", e.target.value)}
-              className="h-full appearance-none bg-white pl-4 pr-10 outline-none"
+              className="h-full appearance-none bg-white pl-4 pr-9 text-secondary outline-none cursor-pointer"
             >
               {countries.map((country) => (
                 <option key={country.code} value={country.code}>
@@ -61,7 +62,7 @@ const Form3 = () => {
               ))}
             </select>
 
-            <IoIosArrowDown className="absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none" />
+            <IoIosArrowDown className="pointer-events-none absolute right-2.5 top-1/2 -translate-y-1/2 text-secondary/70" />
           </div>
 
           <input
@@ -70,7 +71,7 @@ const Form3 = () => {
             placeholder="Mobile number*"
             value={formData.phone}
             onChange={handleChange}
-            className="flex-1 px-4 outline-none placeholder:text-[#777]"
+            className="flex-1 bg-white px-4 text-secondary outline-none placeholder:text-[#777]"
           />
         </div>
 
@@ -87,7 +88,7 @@ const Form3 = () => {
           placeholder="Email ID*"
           value={formData.email}
           onChange={handleChange}
-          className="h-14 w-full rounded-md border border-[#3C3C3C] px-4 outline-none placeholder:text-[#777]"
+          className="h-14 w-full rounded-md border border-[#C5B49F]/60 bg-white px-4 text-secondary outline-none placeholder:text-[#777] transition focus:border-primary focus:ring-1 focus:ring-primary"
         />
 
         {errors.email && (
@@ -95,17 +96,21 @@ const Form3 = () => {
         )}
       </div>
 
-      {/* Enquiry */}
+      {/* Select Enquiries */}
       <div className="relative mb-4">
-        <select className="h-14 w-full appearance-none rounded-md border border-[#3C3C3C] px-4 outline-none text-[#777]">
-          <option>Select Enquiries *</option>
-          <option>Guest Enquiries</option>
-          <option>Property Leasing</option>
-          <option>Investor Relations</option>
-          <option>Career Opportunities</option>
+        <select
+          name="enquiryType"
+          onChange={(e) => setFieldValue("city", e.target.value)}
+          className="h-14 w-full appearance-none rounded-md border border-[#C5B49F]/60 bg-white px-4 text-[#777] outline-none transition focus:border-primary focus:ring-1 focus:ring-primary cursor-pointer"
+        >
+          <option value="">Select Enquiries *</option>
+          <option value="Guest Enquiries">Guest Enquiries</option>
+          <option value="Property Leasing">Property Leasing</option>
+          <option value="Investor Relations">Investor Relations</option>
+          <option value="Career Opportunities">Career Opportunities</option>
         </select>
 
-        <IoIosArrowDown className="pointer-events-none absolute right-4 top-1/2 -translate-y-1/2 text-xl" />
+        <IoIosArrowDown className="pointer-events-none absolute right-4 top-1/2 -translate-y-1/2 text-xl text-[#777]" />
       </div>
 
       {/* Message */}
@@ -116,7 +121,7 @@ const Form3 = () => {
           placeholder="Tell us something about your enquiry!"
           value={formData.message}
           onChange={handleChange}
-          className="w-full resize-none rounded-md border border-[#3C3C3C] p-4 outline-none placeholder:text-[#777]"
+          className="w-full resize-none rounded-md border border-[#C5B49F]/60 bg-white p-4 text-secondary outline-none placeholder:text-[#777] transition focus:border-primary focus:ring-1 focus:ring-primary"
         />
 
         {errors.message && (
@@ -124,11 +129,17 @@ const Form3 = () => {
         )}
       </div>
 
-      {/* Submit */}
+      {submitSuccess && (
+        <p className="mb-4 text-sm font-medium text-emerald-700">
+          Message sent successfully! Our team will get in touch with you soon.
+        </p>
+      )}
+
+      {/* Submit Button */}
       <button
         type="submit"
         disabled={isSubmitting}
-        className="h-14 w-full rounded-md bg-primary text-lg font-medium text-white transition hover:opacity-90"
+        className="h-14 w-full rounded-md bg-primary text-base font-semibold uppercase tracking-wider text-white shadow-sm transition hover:bg-[#6b4724] active:scale-[0.99] disabled:opacity-50 cursor-pointer"
       >
         {isSubmitting ? "Submitting..." : "Submit"}
       </button>
