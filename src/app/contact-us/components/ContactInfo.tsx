@@ -27,7 +27,7 @@ export default function ContactInfo({ data }: Props) {
   const emailList = data.contact.emails || [data.contact.email];
   const mapEmbedUrl =
     data.contact.mapEmbedUrl ||
-    "https://maps.google.com/maps?q=Office+No.+116,+First+Floor,+Ananta+Arcade,+Wasan+Nagar,+Pathardi+Phata,+Nashik+422010+Maharashtra&t=&z=15&ie=UTF8&iwloc=&output=embed";
+    "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3750.294065397661!2d73.7650752!3d19.954131699999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bddebc5de65f741%3A0x45ff476880997bca!2sAnte%20Meridiem%20Hospitality%20Pvt%20Ltd!5e0!3m2!1sen!2sin!4v1791968260624!5m2!1sen!2sin";
 
   return (
     <Section defaultPadding={false} sectionClassName="pb-16">
