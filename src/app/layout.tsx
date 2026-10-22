@@ -1,4 +1,6 @@
+
 import type { Metadata } from "next";
+import Script from "next/script";
 import localFont from "next/font/local";
 import { Cormorant_Garamond } from "next/font/google";
 import "./globals.css";
@@ -55,6 +57,9 @@ const cormorant = Cormorant_Garamond({
 export const metadata: Metadata = {
   title: "Am hospitality",
   description: "",
+  verification: {
+    google: "7LzVi8gnqBd_kEI_OXSk3tIyNiOwBqzZkRsPut1bguI",
+  },
 };
 
 export default function RootLayout({
@@ -63,7 +68,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${gilroy.variable} ${cormorant.variable} h-full antialiased`}>
+    <html
+      lang="en"
+      className={`${gilroy.variable} ${cormorant.variable} h-full antialiased`}
+    >
       <head>
         <link
           rel="apple-touch-icon"
@@ -82,9 +90,25 @@ export default function RootLayout({
           sizes="16x16"
           href="/favicon/favicon-16x16.png"
         />
-        <link rel="manifest" href="/favicon/site.webmanifest"></link>
+        <link rel="manifest" href="/favicon/site.webmanifest" />
       </head>
+
       <body className="" suppressHydrationWarning={true}>
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-W8BNCYQWHM"
+          strategy="afterInteractive"
+        />
+
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){window.dataLayer.push(arguments);}
+            window.gtag = gtag;
+            gtag('js', new Date());
+            gtag('config', 'G-W8BNCYQWHM');
+          `}
+        </Script>
+
         <WebProvider>
           <Popup />
           <NavBar />
